@@ -1,6 +1,7 @@
 import re
 import logging
 import time
+import os
 from datetime import datetime
 from typing import Dict, Any
 from bs4 import BeautifulSoup
@@ -68,8 +69,31 @@ def extract_verdict_data(soup: BeautifulSoup, scan_url: str) -> Dict[str, Any]:
     verdict_metadata = {
         'timestamp': datetime.now().isoformat(),
         'scan_url': scan_url,
-        'targeted_brands': []
+        'targeted_brands': [],
+        'location': None,
+        'asn_org': None
     }
+
+    # Extract location and ASN information from summary panel
+    summary_panel = soup.find('div', class_='panel-body')
+    if summary_panel:
+        # Find the text containing location and ASN info
+        location_text = summary_panel.get_text()
+
+        # Extract location
+        location_match = re.search(r'located in\s+([^,]+(?:,\s+[^,and]+)*)\s+and', location_text)
+        if location_match:
+            verdict_metadata['location'] = location_match.group(1).strip()
+        else:
+            # Try simpler pattern if first one fails
+            location_match = re.search(r'located in\s+([^and]+?)(?:\s+and|\s*$)', location_text)
+            if location_match:
+                verdict_metadata['location'] = location_match.group(1).strip()
+
+        # Extract ASN organization
+        asn_match = re.search(r'belongs to\s+([^\.]+)', location_text)
+        if asn_match:
+            verdict_metadata['asn_org'] = asn_match.group(1).strip()
 
     # Check for malicious warning
     is_malicious = False
