@@ -14,6 +14,7 @@ from queue import Empty
 import tqdm
 import webdriver_utils
 import verdict_processor
+from stats_processor import update_statistics
 
 
 def setup_logging():
@@ -51,9 +52,14 @@ def save_results(results: List[Dict[str, Any]], output_file: str, is_verdict: bo
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(existing_data, f, indent=2, ensure_ascii=False)
 
+        # Update statistics if we're saving verdicts
+        if is_verdict:
+            stats_file = "urlscan_statistics.txt"
+            results_file = "urlscan_results.json"
+            update_statistics(output_file, results_file, stats_file)
+
     except Exception as e:
         logging.error(f"Error saving results: {str(e)}")
-
 
 def process_table_row(row, base_url, seen_urls):
     """Process a single table row and return scan data if valid"""

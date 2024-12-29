@@ -74,26 +74,21 @@ def extract_verdict_data(soup: BeautifulSoup, scan_url: str) -> Dict[str, Any]:
         'asn_org': None
     }
 
-    # Extract location and ASN information from summary panel
+    # Extract ASN information from summary panel
     summary_panel = soup.find('div', class_='panel-body')
     if summary_panel:
-        # Find the text containing location and ASN info
+        # Find the text containing ASN info
         location_text = summary_panel.get_text()
-
-        # Extract location
-        location_match = re.search(r'located in\s+([^,]+(?:,\s+[^,and]+)*)\s+and', location_text)
-        if location_match:
-            verdict_metadata['location'] = location_match.group(1).strip()
-        else:
-            # Try simpler pattern if first one fails
-            location_match = re.search(r'located in\s+([^and]+?)(?:\s+and|\s*$)', location_text)
-            if location_match:
-                verdict_metadata['location'] = location_match.group(1).strip()
 
         # Extract ASN organization
         asn_match = re.search(r'belongs to\s+([^\.]+)', location_text)
         if asn_match:
-            verdict_metadata['asn_org'] = asn_match.group(1).strip()
+            asn_org = asn_match.group(1).strip()
+            verdict_metadata['asn_org'] = asn_org
+
+            # Extract location from ASN org (last two characters if they're present)
+            if ', ' in asn_org:
+                verdict_metadata['location'] = asn_org.split(', ')[-1]
 
     # Check for malicious warning
     is_malicious = False
@@ -122,7 +117,6 @@ def extract_verdict_data(soup: BeautifulSoup, scan_url: str) -> Dict[str, Any]:
                     # Look for brand tags in multiple ways
                     brand_tags = []
                     brand_tags.extend(parent.parent.find_all('span', class_='simpletag'))
-                    brand_tags.extend(parent.find_next_siblings('span', class_='simpletag'))
 
                     # If no simpletag, try finding any span with flag-icon
                     if not brand_tags:
