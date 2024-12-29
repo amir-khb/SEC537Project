@@ -237,10 +237,11 @@ class URLScanRecentScraper:
             return False
 
     def get_page_content(self, url: str = None) -> str:
-        """Fetch page content with enhanced retry logic"""
+        """Fetch page content with enhanced retry logic and proxy rotation"""
         max_retries = 5
         current_retry = 0
         backoff_factor = 1.5
+        timeout_messages = ["timeout: Timed out receiving message from renderer", "TimeoutException"]
 
         while current_retry < max_retries:
             try:
@@ -253,7 +254,7 @@ class URLScanRecentScraper:
                 self.driver.get(target_url)
 
                 # Wait for content to load
-                wait = WebDriverWait(self.driver, 15)
+                wait = WebDriverWait(self.driver, 20)  # Increased wait time
                 if not url:  # Main page
                     wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "table")))
                 else:  # Individual scan page
@@ -265,17 +266,74 @@ class URLScanRecentScraper:
                 return self.driver.page_source
 
             except Exception as e:
+                error_msg = str(e)
                 current_retry += 1
-                logging.error(f"Error fetching page (attempt {current_retry}): {e}")
+
+                # Check if it's a timeout error
+                if any(timeout_msg in error_msg for timeout_msg in timeout_messages):
+                    logging.error(f"Timeout error fetching page (attempt {current_retry}): {e}")
+
+                    # Force proxy rotation on timeout
+                    if current_retry < max_retries:
+                        logging.info("Rotating proxy and retrying...")
+                        self.proxy_handler.refresh_proxies()  # Get fresh proxies
+                        self.restart_driver()  # Restart with new proxy
+                        wait_time = backoff_factor ** current_retry
+                        time.sleep(min(wait_time, 30))
+                        continue
+                else:
+                    logging.error(f"Error fetching page (attempt {current_retry}): {e}")
 
                 if current_retry == max_retries:
-                    logging.error("Max retries reached, restarting driver")
-                    self.restart_driver()
+                    logging.error("Max retries reached, giving up")
+                    break
                 else:
                     wait_time = backoff_factor ** current_retry
                     time.sleep(min(wait_time, 30))
 
         return ""
+
+    def restart_driver(self):
+        """Safely restart the Chrome driver with a new proxy"""
+        try:
+            if self.driver:
+                self.driver.quit()
+        except Exception:
+            pass
+
+        time.sleep(5)
+
+        # Always get a new proxy when restarting
+        self.proxy_handler.refresh_proxies()
+
+        try:
+            chrome_options = Options()
+            chrome_options.add_argument('--headless=new')
+            chrome_options.add_argument('--no-sandbox')
+            chrome_options.add_argument('--disable-dev-shm-usage')
+            chrome_options.add_argument('--disable-gpu')
+            chrome_options.add_argument('--window-size=1920,1080')
+            chrome_options.add_argument('--disable-notifications')
+            chrome_options.add_argument('--disable-popup-blocking')
+
+            # Get and apply new proxy
+            proxy = self.proxy_handler.get_working_proxy()
+            if proxy:
+                proxy_server = proxy['https']
+                chrome_options.add_argument(f'--proxy-server={proxy_server}')
+                logging.info(f"Using new proxy: {proxy_server}")
+
+            user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+            chrome_options.add_argument(f'user-agent={user_agent}')
+
+            service = Service(ChromeDriverManager().install())
+            self.driver = webdriver.Chrome(service=service, options=chrome_options)
+            self.driver.set_page_load_timeout(30)
+            logging.info("ChromeDriver restarted successfully with new proxy")
+
+        except Exception as e:
+            logging.error(f"Error restarting ChromeDriver: {e}")
+            raise
 
     @staticmethod
     def create_driver():
@@ -305,123 +363,166 @@ class URLScanRecentScraper:
         return driver
 
     @staticmethod
-    def process_verdict(scan_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Process a single verdict in a separate process"""
-        try:
-            driver = URLScanRecentScraper.create_driver()
-            scan_url = scan_data['scan_url']
+    def process_verdict(scan_data: Dict[str, Any], max_retries: int = 3) -> Dict[str, Any]:
+        """Process a single verdict in a separate process with retry logic for timeouts"""
+        retry_count = 0
+        timeout_messages = ["timeout: Timed out receiving message from renderer", "TimeoutException"]
 
+        while retry_count < max_retries:
             try:
-                driver.get(scan_url)
-                wait = WebDriverWait(driver, 15)
-                wait.until(EC.presence_of_element_located((By.ID, "summary")))
-                time.sleep(3)
+                # Create a new proxy handler for each attempt
+                proxy_handler = ProxyHandler(max_proxies=1)
+                driver = None
 
-                html_content = driver.page_source
-                soup = BeautifulSoup(html_content, 'html.parser')
+                try:
+                    # Setup Chrome with new proxy
+                    chrome_options = Options()
+                    chrome_options.add_argument('--headless=new')
+                    chrome_options.add_argument('--no-sandbox')
+                    chrome_options.add_argument('--disable-dev-shm-usage')
+                    chrome_options.add_argument('--disable-gpu')
+                    chrome_options.add_argument('--window-size=1920,1080')
+                    chrome_options.add_argument('--disable-notifications')
+                    chrome_options.add_argument('--disable-popup-blocking')
 
-                # Initialize verdict
-                verdict = "No classification"
+                    # Get and apply new proxy
+                    proxy = proxy_handler.get_working_proxy()
+                    if proxy:
+                        proxy_server = proxy['https']
+                        chrome_options.add_argument(f'--proxy-server={proxy_server}')
+                        logging.info(f"Attempt {retry_count + 1}: Using proxy {proxy_server}")
 
-                # Look for malicious activity warning
-                malicious_warning = soup.find(string=lambda text: text and 'Malicious Activity!' in str(text))
-                if malicious_warning:
-                    verdict = "Malicious"
+                    user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+                    chrome_options.add_argument(f'user-agent={user_agent}')
 
-                # Look for explicit verdict text
-                verdict_element = soup.select_one("#summary-container .alert")
-                if verdict_element:
-                    verdict_text = verdict_element.get_text(strip=True)
-                    if "malicious" in verdict_text.lower():
+                    service = Service(ChromeDriverManager().install())
+                    driver = webdriver.Chrome(service=service, options=chrome_options)
+                    driver.set_page_load_timeout(30)
+
+                    scan_url = scan_data['scan_url']
+                    driver.get(scan_url)
+
+                    # Increased wait time for better reliability
+                    wait = WebDriverWait(driver, 20)
+                    wait.until(EC.presence_of_element_located((By.ID, "summary")))
+                    time.sleep(5)  # Additional wait for dynamic content
+
+                    html_content = driver.page_source
+                    soup = BeautifulSoup(html_content, 'html.parser')
+
+                    # Initialize verdict
+                    verdict = "No classification"
+
+                    # Look for malicious activity warning
+                    malicious_warning = soup.find(string=lambda text: text and 'Malicious Activity!' in str(text))
+                    if malicious_warning:
                         verdict = "Malicious"
-                    elif "suspicious" in verdict_text.lower():
-                        verdict = "Suspicious"
-                    elif "benign" in verdict_text.lower():
-                        verdict = "Benign"
 
-                # Extract targeted brands and their countries
-                targeted_brands = []
-                brands_section = soup.find(string=lambda text: text and 'Targeting these brands:' in str(text))
-                if brands_section and brands_section.parent:
-                    brands_container = brands_section.parent.find_next_sibling()
-                    if brands_container:
-                        for brand in brands_container.find_all(['span', 'div']):
-                            # Get all text content including nested elements
-                            brand_name = None
-                            category = None
+                    # Look for explicit verdict text
+                    verdict_element = soup.select_one("#summary-container .alert")
+                    if verdict_element:
+                        verdict_text = verdict_element.get_text(strip=True)
+                        if "malicious" in verdict_text.lower():
+                            verdict = "Malicious"
+                        elif "suspicious" in verdict_text.lower():
+                            verdict = "Suspicious"
+                        elif "benign" in verdict_text.lower():
+                            verdict = "Benign"
 
-                            # First, try to find the brand name specifically
-                            brand_name_elem = brand.find('span', recursive=False)
-                            if brand_name_elem:
-                                brand_name = brand_name_elem.get_text(strip=True)
+                    # Extract targeted brands and their countries
+                    targeted_brands = []
+                    brands_section = soup.find(string=lambda text: text and 'Targeting these brands:' in str(text))
+                    if brands_section and brands_section.parent:
+                        brands_container = brands_section.parent.find_next_sibling()
+                        if brands_container:
+                            for brand in brands_container.find_all(['span', 'div']):
+                                brand_name = None
+                                category = None
 
-                            # Then look for the category text (usually after the brand name)
-                            category_text = brand.get_text(strip=True)
-                            if '(' in category_text and ')' in category_text:
-                                category = category_text[category_text.find('(') + 1:category_text.find(')')].strip()
+                                brand_name_elem = brand.find('span', recursive=False)
+                                if brand_name_elem:
+                                    brand_name = brand_name_elem.get_text(strip=True)
 
-                            # Look for country flag before the brand name
-                            flag_span = brand.find_previous_sibling('span', class_='flag-icon')
-                            brand_country = ''
-                            if flag_span:
-                                flag_classes = [c for c in flag_span.get('class', []) if c.startswith('flag-icon-')]
-                                if flag_classes:
-                                    brand_country = flag_classes[0].replace('flag-icon-', '').upper()
+                                category_text = brand.get_text(strip=True)
+                                if '(' in category_text and ')' in category_text:
+                                    category = category_text[
+                                               category_text.find('(') + 1:category_text.find(')')].strip()
 
-                            # Only add if we have valid data
-                            if category_text:
-                                targeted_brands.append({
-                                    'name': brand_name if brand_name else category_text.split('(')[0].strip(),
-                                    'category': category if category else '',
-                                    'country': brand_country
-                                })
+                                flag_span = brand.find_previous_sibling('span', class_='flag-icon')
+                                brand_country = ''
+                                if flag_span:
+                                    flag_classes = [c for c in flag_span.get('class', []) if c.startswith('flag-icon-')]
+                                    if flag_classes:
+                                        brand_country = flag_classes[0].replace('flag-icon-', '').upper()
 
-                # Extract attacker location and hosting info
-                attacker_info = {'country': '', 'hosting_company': ''}
-                summary_text = soup.select_one("#summary")
-                if summary_text:
-                    location_text = summary_text.get_text()
-                    # Look for "located in X and belongs to Y" pattern
-                    import re
-                    location_match = re.search(r'located in ([^,]+) and belongs to ([^\.]+)', location_text)
-                    if location_match:
-                        attacker_info['country'] = location_match.group(1).strip()
-                        attacker_info['hosting_company'] = location_match.group(2).strip()
+                                if category_text:
+                                    targeted_brands.append({
+                                        'name': brand_name if brand_name else category_text.split('(')[0].strip(),
+                                        'category': category if category else '',
+                                        'country': brand_country
+                                    })
 
-                # Collect metadata
-                metadata = {
-                    'timestamp': datetime.now().isoformat(),
-                    'scan_url': scan_url,
-                    'targeted_brands': targeted_brands,
-                    'attacker_location': attacker_info['country'],
-                    'attacker_hosting': attacker_info['hosting_company']
-                }
+                    # Extract attacker info
+                    attacker_info = {'country': '', 'hosting_company': ''}
+                    summary_text = soup.select_one("#summary")
+                    if summary_text:
+                        location_text = summary_text.get_text()
+                        import re
+                        location_match = re.search(r'located in ([^,]+) and belongs to ([^\.]+)', location_text)
+                        if location_match:
+                            attacker_info['country'] = location_match.group(1).strip()
+                            attacker_info['hosting_company'] = location_match.group(2).strip()
 
-                # Get IP and location info
-                ip_details = soup.select_one("#ip-information")
-                if ip_details:
-                    metadata['ip_info'] = ip_details.get_text(strip=True)
+                    metadata = {
+                        'timestamp': datetime.now().isoformat(),
+                        'scan_url': scan_url,
+                        'targeted_brands': targeted_brands,
+                        'attacker_location': attacker_info['country'],
+                        'attacker_hosting': attacker_info['hosting_company']
+                    }
 
-                # Get threat indicators
-                threats = soup.select_one("#threats")
-                if threats:
-                    metadata['threats'] = threats.get_text(strip=True)
+                    # Get additional details
+                    ip_details = soup.select_one("#ip-information")
+                    if ip_details:
+                        metadata['ip_info'] = ip_details.get_text(strip=True)
 
-                scan_data['verdict'] = verdict
-                scan_data['verdict_metadata'] = metadata
+                    threats = soup.select_one("#threats")
+                    if threats:
+                        metadata['threats'] = threats.get_text(strip=True)
+
+                    scan_data['verdict'] = verdict
+                    scan_data['verdict_metadata'] = metadata
+
+                    # If we get here without errors, break the retry loop
+                    break
+
+                except Exception as e:
+                    error_msg = str(e)
+                    # Check if it's a timeout error
+                    if any(timeout_msg in error_msg for timeout_msg in timeout_messages):
+                        retry_count += 1
+                        logging.warning(f"Timeout error on attempt {retry_count}. Retrying with new proxy...")
+                        if retry_count < max_retries:
+                            time.sleep(retry_count * 2)  # Exponential backoff
+                            continue
+
+                    scan_data['verdict'] = "Error"
+                    scan_data['verdict_metadata'] = {'error': str(e)}
+
+                finally:
+                    if driver:
+                        try:
+                            driver.quit()
+                        except Exception:
+                            pass
 
             except Exception as e:
+                logging.error(f"Outer error in process_verdict: {e}")
                 scan_data['verdict'] = "Error"
                 scan_data['verdict_metadata'] = {'error': str(e)}
 
-            finally:
-                driver.quit()
+        return scan_data
 
-            return scan_data
-
-        except Exception as e:
-            logging.error(f"Error in process_verdict: {e}")
-            return {**scan_data, 'verdict': "Error", 'verdict_metadata': {'error': str(e)}}
 
     def get_scan_url_from_row(self, row) -> Optional[str]:
         """Extract the scan URL from a table row"""
