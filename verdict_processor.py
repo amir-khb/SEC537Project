@@ -87,28 +87,55 @@ def extract_verdict_data(soup: BeautifulSoup, scan_url: str) -> Dict[str, Any]:
     # Only proceed with brand checking if the verdict is malicious
     if is_malicious:
         try:
-            # Look for the simpletag that contains brand information
-            brand_tag = soup.find('span', class_='simpletag')
-            if brand_tag:
-                # Find flag icon inside the simpletag
-                flag = brand_tag.find('span', class_=lambda x: x and 'flag-icon-' in x)
-                if flag:
-                    country_code = flag.get('class')[1].replace('flag-icon-', '').upper()
+            # First try to find the targeting text itself
+            targeting_section = soup.find(string=lambda text: text and 'Targeting these brands:' in str(text))
+            if targeting_section:
+                # Look for brand tags in the parent or next siblings
+                parent = targeting_section.parent
+                if parent:
+                    print("Found targeting section in malicious verdict")
 
-                    # Get brand name and category
-                    brand_text = brand_tag.get_text(strip=True)
-                    brand_parts = brand_text.split('(')
-                    if len(brand_parts) == 2:
-                        brand_name = brand_parts[0].strip()
-                        brand_category = brand_parts[1].replace(')', '').strip()
+                    # Look for brand tags in multiple ways
+                    brand_tags = []
+                    brand_tags.extend(parent.parent.find_all('span', class_='simpletag'))
+                    brand_tags.extend(parent.find_next_siblings('span', class_='simpletag'))
 
-                        verdict_metadata['targeted_brands'].append({
-                            'name': brand_name,
-                            'category': brand_category,
-                            'country': country_code
-                        })
-                        print(
-                            f"Extracted brand information - Name: {brand_name}, Category: {brand_category}, Country: {country_code}")
+                    # If no simpletag, try finding any span with flag-icon
+                    if not brand_tags:
+                        brand_tags.extend(parent.parent.find_all('span', class_=lambda x: x and 'flag-icon-' in x))
+
+                    print(f"Found {len(brand_tags)} potential brand tags")
+
+                    for brand_tag in brand_tags:
+                        # Find flag icon which might be in the current tag or a child
+                        flag = brand_tag.find('span', class_=lambda x: x and 'flag-icon-' in x)
+                        if not flag:
+                            flag = brand_tag if 'flag-icon-' in brand_tag.get('class', []) else None
+
+                        if flag:
+                            country_code = [c for c in flag.get('class') if 'flag-icon-' in c][0]
+                            country_code = country_code.replace('flag-icon-', '').upper()
+
+                            # Get brand text, handling different structures
+                            brand_text = brand_tag.get_text(strip=True)
+                            print(f"Processing brand text: {brand_text}")
+
+                            # Try different text patterns
+                            if '(' in brand_text:
+                                brand_parts = brand_text.split('(')
+                                brand_name = brand_parts[0].strip()
+                                brand_category = brand_parts[1].replace(')', '').strip()
+                            else:
+                                # If no category in parentheses, try to infer
+                                brand_name = brand_text
+                                brand_category = "Unknown"
+
+                            verdict_metadata['targeted_brands'].append({
+                                'name': brand_name,
+                                'category': brand_category,
+                                'country': country_code
+                            })
+                            print(f"Added brand: {brand_name} ({brand_category}) from {country_code}")
 
         except Exception as e:
             print(f"Error extracting brand information for malicious verdict: {str(e)}")
