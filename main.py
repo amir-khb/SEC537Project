@@ -167,7 +167,20 @@ class URLScanRecentScraper:
                     brands_container = brands_section.parent.find_next_sibling()
                     if brands_container:
                         for brand in brands_container.find_all(['span', 'div']):
-                            brand_name = brand.get_text(strip=True)
+                            # Get all text content including nested elements
+                            brand_name = None
+                            category = None
+
+                            # First, try to find the brand name specifically
+                            brand_name_elem = brand.find('span', recursive=False)
+                            if brand_name_elem:
+                                brand_name = brand_name_elem.get_text(strip=True)
+
+                            # Then look for the category text (usually after the brand name)
+                            category_text = brand.get_text(strip=True)
+                            if '(' in category_text and ')' in category_text:
+                                category = category_text[category_text.find('(') + 1:category_text.find(')')].strip()
+
                             # Look for country flag before the brand name
                             flag_span = brand.find_previous_sibling('span', class_='flag-icon')
                             brand_country = ''
@@ -176,9 +189,11 @@ class URLScanRecentScraper:
                                 if flag_classes:
                                     brand_country = flag_classes[0].replace('flag-icon-', '').upper()
 
-                            if brand_name:
+                            # Only add if we have valid data
+                            if category_text:
                                 targeted_brands.append({
-                                    'name': brand_name,
+                                    'name': brand_name if brand_name else category_text.split('(')[0].strip(),
+                                    'category': category if category else '',
                                     'country': brand_country
                                 })
 
@@ -363,7 +378,7 @@ class URLScanRecentScraper:
         self.setup_driver()
 
     def monitor_recent_scans(self, duration_minutes: int = 60, interval_seconds: int = 15):
-        """Monitor recent scans using multiprocessing for verdict checking"""
+        """Monitor recent scans using multiprocessing for verdict checking."""
         end_time = time.time() + (duration_minutes * 60)
         num_processes = max(1, cpu_count() - 1)  # Leave one CPU core free
 
@@ -386,9 +401,16 @@ class URLScanRecentScraper:
                                     # Save all scan results
                                     self.save_results(results)
 
+                                    # Check for "verdict": "Error"
+                                    for result in results:
+                                        if result.get('verdict') == "Error":
+                                            logging.info(f"Terminating program due to error verdict: {result}")
+                                            raise SystemExit
+
                                     # Filter and save malicious results
-                                    malicious_results = [result for result in results
-                                                         if result['verdict'].lower() == 'malicious']
+                                    malicious_results = [
+                                        result for result in results if result['verdict'].lower() == 'malicious'
+                                    ]
 
                                     if malicious_results:
                                         logging.info(f"Found {len(malicious_results)} malicious URLs")
@@ -404,6 +426,9 @@ class URLScanRecentScraper:
 
                         time.sleep(interval_seconds)
 
+                    except SystemExit:
+                        logging.info("Program terminated due to error verdict")
+                        break
                     except Exception as e:
                         logging.error(f"Error in monitoring loop: {e}")
                         time.sleep(interval_seconds * 2)
