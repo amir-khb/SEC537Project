@@ -9,6 +9,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_utils import create_chrome_driver
 
+
 def process_verdict(scan_data: Dict[str, Any], max_retries: int = 5) -> Dict[str, Any]:
     """Process a single verdict with retry logic"""
     retry_count = 0
@@ -17,11 +18,26 @@ def process_verdict(scan_data: Dict[str, Any], max_retries: int = 5) -> Dict[str
         try:
             driver = create_chrome_driver(use_proxy=True)
             scan_url = scan_data['scan_url']
+
             driver.get(scan_url)
 
+            # Wait for summary section
             wait = WebDriverWait(driver, 20)
-            wait.until(EC.presence_of_element_located((By.ID, "summary")))
+            summary = wait.until(EC.presence_of_element_located((By.ID, "summary")))
+
+            # Scroll to summary
+            driver.execute_script("arguments[0].scrollIntoView(true);", summary)
+
+            # Additional wait for dynamic content
             time.sleep(5)
+
+            # Try to wait for brand information
+            try:
+                brand_info = wait.until(
+                    EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Targeting these brands:')]"))
+                )
+            except Exception:
+                pass
 
             html_content = driver.page_source
             soup = BeautifulSoup(html_content, 'html.parser')
@@ -45,52 +61,58 @@ def process_verdict(scan_data: Dict[str, Any], max_retries: int = 5) -> Dict[str
 
     return scan_data
 
+
 def extract_verdict_data(soup: BeautifulSoup, scan_url: str) -> Dict[str, Any]:
     """Extract verdict information from the page"""
     verdict = "No classification"
     verdict_metadata = {
         'timestamp': datetime.now().isoformat(),
         'scan_url': scan_url,
-        'targeted_brands': [],
-        'attacker_location': '',
-        'attacker_hosting': '',
-        'ip_info': '',
-        'threats': ''
+        'targeted_brands': []
     }
 
     # Check for malicious warning
+    is_malicious = False
     if soup.find(string=lambda text: text and 'Malicious Activity!' in str(text)):
         verdict = "Malicious"
+        is_malicious = True
 
-    # Check verdict text
-    verdict_element = soup.select_one("#summary-container .alert")
-    if verdict_element:
-        verdict_text = verdict_element.get_text(strip=True).lower()
-        if "malicious" in verdict_text:
-            verdict = "Malicious"
-        elif "suspicious" in verdict_text:
-            verdict = "Suspicious"
-        elif "benign" in verdict_text:
-            verdict = "Benign"
+    # Check verdict text for potentially malicious
+    verdict_element = soup.select_one("span.red")
+    if verdict_element and ("Malicious" in verdict_element.get_text() or
+                            "Potentially Malicious" in verdict_element.get_text()):
+        verdict = "Malicious"
+        is_malicious = True
 
-    # Extract additional information
-    summary_text = soup.select_one("#summary")
-    if summary_text:
-        location_match = re.search(r'located in ([^,]+) and belongs to ([^\.]+)',
-                                 summary_text.get_text())
-        if location_match:
-            verdict_metadata['attacker_location'] = location_match.group(1).strip()
-            verdict_metadata['attacker_hosting'] = location_match.group(2).strip()
+    # Only proceed with brand checking if the verdict is malicious
+    if is_malicious:
+        try:
+            # Look for the simpletag that contains brand information
+            brand_tag = soup.find('span', class_='simpletag')
+            if brand_tag:
+                # Find flag icon inside the simpletag
+                flag = brand_tag.find('span', class_=lambda x: x and 'flag-icon-' in x)
+                if flag:
+                    country_code = flag.get('class')[1].replace('flag-icon-', '').upper()
 
-    # Get IP information
-    ip_details = soup.select_one("#ip-information")
-    if ip_details:
-        verdict_metadata['ip_info'] = ip_details.get_text(strip=True)
+                    # Get brand name and category
+                    brand_text = brand_tag.get_text(strip=True)
+                    brand_parts = brand_text.split('(')
+                    if len(brand_parts) == 2:
+                        brand_name = brand_parts[0].strip()
+                        brand_category = brand_parts[1].replace(')', '').strip()
 
-    # Get threats information
-    threats = soup.select_one("#threats")
-    if threats:
-        verdict_metadata['threats'] = threats.get_text(strip=True)
+                        verdict_metadata['targeted_brands'].append({
+                            'name': brand_name,
+                            'category': brand_category,
+                            'country': country_code
+                        })
+                        print(
+                            f"Extracted brand information - Name: {brand_name}, Category: {brand_category}, Country: {country_code}")
+
+        except Exception as e:
+            print(f"Error extracting brand information for malicious verdict: {str(e)}")
+            logging.exception("Error in brand extraction")
 
     return {
         'verdict': verdict,
