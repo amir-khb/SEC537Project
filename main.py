@@ -10,11 +10,9 @@ import json
 import time
 from datetime import datetime
 import logging
-from typing import List, Dict, Any, Optional, Tuple
+from typing import List, Dict, Any, Optional
 import os
-import random
 from multiprocessing import Pool, cpu_count
-from functools import partial
 
 
 class URLScanRecentScraper:
