@@ -133,7 +133,6 @@ class URLScanRecentScraper:
             scan_url = scan_data['scan_url']
 
             try:
-                # Wait for page to load
                 driver.get(scan_url)
                 wait = WebDriverWait(driver, 15)
                 wait.until(EC.presence_of_element_located((By.ID, "summary")))
@@ -161,10 +160,47 @@ class URLScanRecentScraper:
                     elif "benign" in verdict_text.lower():
                         verdict = "Benign"
 
+                # Extract targeted brands and their countries
+                targeted_brands = []
+                brands_section = soup.find(string=lambda text: text and 'Targeting these brands:' in str(text))
+                if brands_section and brands_section.parent:
+                    brands_container = brands_section.parent.find_next_sibling()
+                    if brands_container:
+                        for brand in brands_container.find_all(['span', 'div']):
+                            brand_name = brand.get_text(strip=True)
+                            # Look for country flag before the brand name
+                            flag_span = brand.find_previous_sibling('span', class_='flag-icon')
+                            brand_country = ''
+                            if flag_span:
+                                flag_classes = [c for c in flag_span.get('class', []) if c.startswith('flag-icon-')]
+                                if flag_classes:
+                                    brand_country = flag_classes[0].replace('flag-icon-', '').upper()
+
+                            if brand_name:
+                                targeted_brands.append({
+                                    'name': brand_name,
+                                    'country': brand_country
+                                })
+
+                # Extract attacker location and hosting info
+                attacker_info = {'country': '', 'hosting_company': ''}
+                summary_text = soup.select_one("#summary")
+                if summary_text:
+                    location_text = summary_text.get_text()
+                    # Look for "located in X and belongs to Y" pattern
+                    import re
+                    location_match = re.search(r'located in ([^,]+) and belongs to ([^\.]+)', location_text)
+                    if location_match:
+                        attacker_info['country'] = location_match.group(1).strip()
+                        attacker_info['hosting_company'] = location_match.group(2).strip()
+
                 # Collect metadata
                 metadata = {
                     'timestamp': datetime.now().isoformat(),
-                    'scan_url': scan_url
+                    'scan_url': scan_url,
+                    'targeted_brands': targeted_brands,
+                    'attacker_location': attacker_info['country'],
+                    'attacker_hosting': attacker_info['hosting_company']
                 }
 
                 # Get IP and location info
