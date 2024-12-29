@@ -1,0 +1,332 @@
+[
+  {
+    "timestamp": "2024-12-28T23:24:30.193524",
+    "url": "www.globalintegratedapp.com/index/user/login.html",
+    "scan_url": "https://urlscan.io/result/6b6984fe-1041-4b18-8aab-ac030a270862/",
+    "age": "22 seconds",
+    "size": "572 KB",
+    "requests": "12",
+    "ips": "1",
+    "threats": "1",
+    "country": "",
+    "status": "public",
+    "verdict": "Processing Error",
+    "verdict_metadata": {
+      "error": "All attempts to process verdict failed",
+      "timestamp": "2024-12-28T23:26:54.355478"
+    }
+  },
+  {
+    "timestamp": "2024-12-28T23:24:30.193665",
+    "url": "support.duvlan.com/",
+    "scan_url": "https://urlscan.io/result/cb5b3d1a-6538-43fa-a67d-350024cccab5/",
+    "age": "28 seconds",
+    "size": "160 KB",
+    "requests": "11",
+    "ips": "2",
+    "threats": "1",
+    "country": "DE",
+    "status": "public",
+    "verdict": "Processing Error",
+    "verdict_metadata": {
+      "error": "All attempts to process verdict failed",
+      "timestamp": "2024-12-28T23:25:59.998688"
+    }
+  },
+  {
+    "timestamp": "2024-12-28T23:24:30.193749",
+    "url": "ben3dart.artstation.com/",
+    "scan_url": "https://urlscan.io/result/f6dba6ed-d225-4e5c-9d4e-33bd7b244bba/",
+    "age": "31 seconds",
+    "size": "5 MB",
+    "requests": "154",
+    "ips": "6",
+    "threats": "2",
+    "country": "",
+    "status": "public",
+    "verdict": "Processing Error",
+    "verdict_metadata": {
+      "error": "All attempts to process verdict failed",
+      "timestamp": "2024-12-28T23:25:30.557282"
+    }
+  },
+  {
+    "timestamp": "2024-12-28T23:24:30.193830",
+    "url": "notexistsexchange.lamangabooking.com/en/",
+    "scan_url": "https://urlscan.io/result/961ced94-20a1-4df5-9127-41b87980293e/",
+    "age": "35 seconds",
+    "size": "2 MB",
+    "requests": "39",
+    "ips": "4",
+    "threats": "3",
+    "country": "ES",
+    "status": "public",
+    "verdict": "Processing Error",
+    "verdict_metadata": {
+      "error": "All attempts to process verdict failed",
+      "timestamp": "2024-12-28T23:26:29.406803"
+    }
+  },
+  {
+    "timestamp": "2024-12-28T23:24:30.193933",
+    "url": "pay.researchcontantsbiz.com/",
+    "scan_url": "https://urlscan.io/result/ccbbd451-433a-4a1a-8270-ea224fa7208a/",
+    "age": "36 seconds",
+    "size": "186 KB",
+    "requests": "11",
+    "ips": "8",
+    "threats": "2",
+    "country": "US",
+    "status": "public",
+    "verdict": "Processing Error",
+    "verdict_metadata": {
+      "error": "All attempts to process verdict failed",
+      "timestamp": "2024-12-28T23:26:27.938802"
+    }
+  },
+  {
+    "timestamp": "2024-12-28T23:24:30.194013",
+    "url": "fullrecoverysupport.com/",
+    "scan_url": "https://urlscan.io/result/20039b94-31fc-41f0-a07c-7281aeee6cc6/",
+    "age": "38 seconds",
+    "size": "538 KB",
+    "requests": "64",
+    "ips": "8",
+    "threats": "2",
+    "country": "US",
+    "status": "public",
+    "verdict": "Processing Error",
+    "verdict_metadata": {
+      "error": "All attempts to process verdict failed",
+      "timestamp": "2024-12-28T23:26:28.016519"
+    }
+  },
+  {
+    "timestamp": "2024-12-28T23:24:30.194089",
+    "url": "pay.hardessttfitsbykekee.com/",
+    "scan_url": "https://urlscan.io/result/ee00fae9-5e7e-489e-ad3d-c3bc129bb4f7/",
+    "age": "39 seconds",
+    "size": "284 KB",
+    "requests": "26",
+    "ips": "11",
+    "threats": "3",
+    "country": "US",
+    "status": "public",
+    "verdict": "Processing Error",
+    "verdict_metadata": {
+      "error": "All attempts to process verdict failed",
+      "timestamp": "2024-12-28T23:26:42.015313"
+    }
+  },
+  {
+    "timestamp": "2024-12-28T23:24:30.194166",
+    "url": "starniko.straw.page/",
+    "scan_url": "https://urlscan.io/result/a2f82616-4fcf-4818-bcb9-d14c9f650743/",
+    "age": "41 seconds",
+    "size": "1 MB",
+    "requests": "31",
+    "ips": "7",
+    "threats": "2",
+    "country": "US",
+    "status": "public",
+    "verdict": "Processing Error",
+    "verdict_metadata": {
+      "error": "All attempts to process verdict failed",
+      "timestamp": "2024-12-28T23:27:55.248998"
+    }
+  },
+  {
+    "timestamp": "2024-12-28T23:24:30.194243",
+    "url": "onlinewebdesigner.eu/",
+    "scan_url": "https://urlscan.io/result/014bea5d-7f06-4102-b461-52ecee9c836e/",
+    "age": "47 seconds",
+    "size": "537 KB",
+    "requests": "56",
+    "ips": "4",
+    "threats": "4",
+    "country": "CY",
+    "status": "public",
+    "verdict": "Processing Error",
+    "verdict_metadata": {
+      "error": "All attempts to process verdict failed",
+      "timestamp": "2024-12-28T23:28:14.757942"
+    }
+  },
+  {
+    "timestamp": "2024-12-28T23:24:30.194320",
+    "url": "darcnemesis.carrd.co/",
+    "scan_url": "https://urlscan.io/result/09fdc97a-632b-4211-a9d7-f1df231a53cf/",
+    "age": "48 seconds",
+    "size": "163 KB",
+    "requests": "7",
+    "ips": "2",
+    "threats": "1",
+    "country": "US",
+    "status": "public",
+    "verdict": "Processing Error",
+    "verdict_metadata": {
+      "error": "All attempts to process verdict failed",
+      "timestamp": "2024-12-28T23:28:51.842724"
+    }
+  },
+  {
+    "timestamp": "2024-12-28T23:33:52.399404",
+    "url": "blitzkit.app/",
+    "scan_url": "https://urlscan.io/result/5845d696-7470-418f-9e50-b98f66a44c59/",
+    "age": "15 seconds",
+    "size": "2 MB",
+    "requests": "87",
+    "ips": "5",
+    "threats": "2",
+    "country": "US",
+    "status": "public",
+    "verdict": "Error",
+    "verdict_metadata": {
+      "error": "Message: \nStacktrace:\n0   chromedriver                        0x00000001048b7184 cxxbridge1$str$ptr + 3626716\n1   chromedriver                        0x00000001048af9d4 cxxbridge1$str$ptr + 3596076\n2   chromedriver                        0x000000010431c968 cxxbridge1$string$len + 89228\n3   chromedriver                        0x0000000104360d50 cxxbridge1$string$len + 368756\n4   chromedriver                        0x000000010439a5b4 cxxbridge1$string$len + 604376\n5   chromedriver                        0x0000000104355568 cxxbridge1$string$len + 321676\n6   chromedriver                        0x00000001043561b8 cxxbridge1$string$len + 324828\n7   chromedriver                        0x00000001048829ac cxxbridge1$str$ptr + 3411716\n8   chromedriver                        0x0000000104885ccc cxxbridge1$str$ptr + 3424804\n9   chromedriver                        0x000000010486986c cxxbridge1$str$ptr + 3308996\n10  chromedriver                        0x000000010488658c cxxbridge1$str$ptr + 3427044\n11  chromedriver                        0x000000010485b09c cxxbridge1$str$ptr + 3249652\n12  chromedriver                        0x00000001048a04b8 cxxbridge1$str$ptr + 3533328\n13  chromedriver                        0x00000001048a0634 cxxbridge1$str$ptr + 3533708\n14  chromedriver                        0x00000001048af648 cxxbridge1$str$ptr + 3595168\n15  libsystem_pthread.dylib             0x000000019bb082e4 _pthread_start + 136\n16  libsystem_pthread.dylib             0x000000019bb030fc thread_start + 8\n"
+    }
+  },
+  {
+    "timestamp": "2024-12-28T23:33:52.399480",
+    "url": "palakeda.carrd.co/",
+    "scan_url": "https://urlscan.io/result/8b103264-8df0-460f-960a-1b2be8123225/",
+    "age": "19 seconds",
+    "size": "670 KB",
+    "requests": "11",
+    "ips": "4",
+    "threats": "2",
+    "country": "",
+    "status": "public",
+    "verdict": "Error",
+    "verdict_metadata": {
+      "error": "Message: \nStacktrace:\n0   chromedriver                        0x00000001050d7184 cxxbridge1$str$ptr + 3626716\n1   chromedriver                        0x00000001050cf9d4 cxxbridge1$str$ptr + 3596076\n2   chromedriver                        0x0000000104b3c968 cxxbridge1$string$len + 89228\n3   chromedriver                        0x0000000104b80d50 cxxbridge1$string$len + 368756\n4   chromedriver                        0x0000000104bba5b4 cxxbridge1$string$len + 604376\n5   chromedriver                        0x0000000104b75568 cxxbridge1$string$len + 321676\n6   chromedriver                        0x0000000104b761b8 cxxbridge1$string$len + 324828\n7   chromedriver                        0x00000001050a29ac cxxbridge1$str$ptr + 3411716\n8   chromedriver                        0x00000001050a5ccc cxxbridge1$str$ptr + 3424804\n9   chromedriver                        0x000000010508986c cxxbridge1$str$ptr + 3308996\n10  chromedriver                        0x00000001050a658c cxxbridge1$str$ptr + 3427044\n11  chromedriver                        0x000000010507b09c cxxbridge1$str$ptr + 3249652\n12  chromedriver                        0x00000001050c04b8 cxxbridge1$str$ptr + 3533328\n13  chromedriver                        0x00000001050c0634 cxxbridge1$str$ptr + 3533708\n14  chromedriver                        0x00000001050cf648 cxxbridge1$str$ptr + 3595168\n15  libsystem_pthread.dylib             0x000000019bb082e4 _pthread_start + 136\n16  libsystem_pthread.dylib             0x000000019bb030fc thread_start + 8\n"
+    }
+  },
+  {
+    "timestamp": "2024-12-28T23:33:52.399532",
+    "url": "mikoann.com/",
+    "scan_url": "https://urlscan.io/result/c193d3d5-572a-4261-ac19-4332b6e26284/",
+    "age": "22 seconds",
+    "size": "347 KB",
+    "requests": "11",
+    "ips": "1",
+    "threats": "1",
+    "country": "US",
+    "status": "public",
+    "verdict": "Error",
+    "verdict_metadata": {
+      "error": "Message: \nStacktrace:\n0   chromedriver                        0x0000000104a0b184 cxxbridge1$str$ptr + 3626716\n1   chromedriver                        0x0000000104a039d4 cxxbridge1$str$ptr + 3596076\n2   chromedriver                        0x0000000104470968 cxxbridge1$string$len + 89228\n3   chromedriver                        0x00000001044b4d50 cxxbridge1$string$len + 368756\n4   chromedriver                        0x00000001044ee5b4 cxxbridge1$string$len + 604376\n5   chromedriver                        0x00000001044a9568 cxxbridge1$string$len + 321676\n6   chromedriver                        0x00000001044aa1b8 cxxbridge1$string$len + 324828\n7   chromedriver                        0x00000001049d69ac cxxbridge1$str$ptr + 3411716\n8   chromedriver                        0x00000001049d9ccc cxxbridge1$str$ptr + 3424804\n9   chromedriver                        0x00000001049bd86c cxxbridge1$str$ptr + 3308996\n10  chromedriver                        0x00000001049da58c cxxbridge1$str$ptr + 3427044\n11  chromedriver                        0x00000001049af09c cxxbridge1$str$ptr + 3249652\n12  chromedriver                        0x00000001049f44b8 cxxbridge1$str$ptr + 3533328\n13  chromedriver                        0x00000001049f4634 cxxbridge1$str$ptr + 3533708\n14  chromedriver                        0x0000000104a03648 cxxbridge1$str$ptr + 3595168\n15  libsystem_pthread.dylib             0x000000019bb082e4 _pthread_start + 136\n16  libsystem_pthread.dylib             0x000000019bb030fc thread_start + 8\n"
+    }
+  },
+  {
+    "timestamp": "2024-12-28T23:33:52.399591",
+    "url": "www.willowregionsportsmanclub.com/",
+    "scan_url": "https://urlscan.io/result/2d1b1322-13bc-4586-8b7f-18495fa5dcac/",
+    "age": "26 seconds",
+    "size": "1014 KB",
+    "requests": "84",
+    "ips": "8",
+    "threats": "1",
+    "country": "US",
+    "status": "public",
+    "verdict": "Error",
+    "verdict_metadata": {
+      "error": "Message: \nStacktrace:\n0   chromedriver                        0x0000000101197184 cxxbridge1$str$ptr + 3626716\n1   chromedriver                        0x000000010118f9d4 cxxbridge1$str$ptr + 3596076\n2   chromedriver                        0x0000000100bfc968 cxxbridge1$string$len + 89228\n3   chromedriver                        0x0000000100c40d50 cxxbridge1$string$len + 368756\n4   chromedriver                        0x0000000100c7a5b4 cxxbridge1$string$len + 604376\n5   chromedriver                        0x0000000100c35568 cxxbridge1$string$len + 321676\n6   chromedriver                        0x0000000100c361b8 cxxbridge1$string$len + 324828\n7   chromedriver                        0x00000001011629ac cxxbridge1$str$ptr + 3411716\n8   chromedriver                        0x0000000101165ccc cxxbridge1$str$ptr + 3424804\n9   chromedriver                        0x000000010114986c cxxbridge1$str$ptr + 3308996\n10  chromedriver                        0x000000010116658c cxxbridge1$str$ptr + 3427044\n11  chromedriver                        0x000000010113b09c cxxbridge1$str$ptr + 3249652\n12  chromedriver                        0x00000001011804b8 cxxbridge1$str$ptr + 3533328\n13  chromedriver                        0x0000000101180634 cxxbridge1$str$ptr + 3533708\n14  chromedriver                        0x000000010118f648 cxxbridge1$str$ptr + 3595168\n15  libsystem_pthread.dylib             0x000000019bb082e4 _pthread_start + 136\n16  libsystem_pthread.dylib             0x000000019bb030fc thread_start + 8\n"
+    }
+  },
+  {
+    "timestamp": "2024-12-28T23:33:52.399634",
+    "url": "sedo.com/search/details/?domain=youla.blablacar.yandex.kwid9.metaplatform.xyz&c...",
+    "scan_url": "https://urlscan.io/result/5e920c52-fc50-4045-8461-b1375a14e1b9/",
+    "age": "36 seconds",
+    "size": "3 MB",
+    "requests": "48",
+    "ips": "7",
+    "threats": "2",
+    "country": "US",
+    "status": "public",
+    "verdict": "Error",
+    "verdict_metadata": {
+      "error": "Message: \nStacktrace:\n0   chromedriver                        0x0000000104f2f184 cxxbridge1$str$ptr + 3626716\n1   chromedriver                        0x0000000104f279d4 cxxbridge1$str$ptr + 3596076\n2   chromedriver                        0x0000000104994968 cxxbridge1$string$len + 89228\n3   chromedriver                        0x00000001049d8d50 cxxbridge1$string$len + 368756\n4   chromedriver                        0x0000000104a125b4 cxxbridge1$string$len + 604376\n5   chromedriver                        0x00000001049cd568 cxxbridge1$string$len + 321676\n6   chromedriver                        0x00000001049ce1b8 cxxbridge1$string$len + 324828\n7   chromedriver                        0x0000000104efa9ac cxxbridge1$str$ptr + 3411716\n8   chromedriver                        0x0000000104efdccc cxxbridge1$str$ptr + 3424804\n9   chromedriver                        0x0000000104ee186c cxxbridge1$str$ptr + 3308996\n10  chromedriver                        0x0000000104efe58c cxxbridge1$str$ptr + 3427044\n11  chromedriver                        0x0000000104ed309c cxxbridge1$str$ptr + 3249652\n12  chromedriver                        0x0000000104f184b8 cxxbridge1$str$ptr + 3533328\n13  chromedriver                        0x0000000104f18634 cxxbridge1$str$ptr + 3533708\n14  chromedriver                        0x0000000104f27648 cxxbridge1$str$ptr + 3595168\n15  libsystem_pthread.dylib             0x000000019bb082e4 _pthread_start + 136\n16  libsystem_pthread.dylib             0x000000019bb030fc thread_start + 8\n"
+    }
+  },
+  {
+    "timestamp": "2024-12-28T23:33:52.399677",
+    "url": "www.a2zproperty.in/",
+    "scan_url": "https://urlscan.io/result/2fb2cc1f-dcd4-4ca3-bee9-445c35eae8b7/",
+    "age": "45 seconds",
+    "size": "468 KB",
+    "requests": "16",
+    "ips": "4",
+    "threats": "2",
+    "country": "",
+    "status": "public",
+    "verdict": "Error",
+    "verdict_metadata": {
+      "error": "Message: \nStacktrace:\n0   chromedriver                        0x0000000101353184 cxxbridge1$str$ptr + 3626716\n1   chromedriver                        0x000000010134b9d4 cxxbridge1$str$ptr + 3596076\n2   chromedriver                        0x0000000100db8968 cxxbridge1$string$len + 89228\n3   chromedriver                        0x0000000100dfcd50 cxxbridge1$string$len + 368756\n4   chromedriver                        0x0000000100e365b4 cxxbridge1$string$len + 604376\n5   chromedriver                        0x0000000100df1568 cxxbridge1$string$len + 321676\n6   chromedriver                        0x0000000100df21b8 cxxbridge1$string$len + 324828\n7   chromedriver                        0x000000010131e9ac cxxbridge1$str$ptr + 3411716\n8   chromedriver                        0x0000000101321ccc cxxbridge1$str$ptr + 3424804\n9   chromedriver                        0x000000010130586c cxxbridge1$str$ptr + 3308996\n10  chromedriver                        0x000000010132258c cxxbridge1$str$ptr + 3427044\n11  chromedriver                        0x00000001012f709c cxxbridge1$str$ptr + 3249652\n12  chromedriver                        0x000000010133c4b8 cxxbridge1$str$ptr + 3533328\n13  chromedriver                        0x000000010133c634 cxxbridge1$str$ptr + 3533708\n14  chromedriver                        0x000000010134b648 cxxbridge1$str$ptr + 3595168\n15  libsystem_pthread.dylib             0x000000019bb082e4 _pthread_start + 136\n16  libsystem_pthread.dylib             0x000000019bb030fc thread_start + 8\n"
+    }
+  },
+  {
+    "timestamp": "2024-12-28T23:33:52.399718",
+    "url": "tripnow.world/",
+    "scan_url": "https://urlscan.io/result/cd37a523-aa20-4e35-9fd4-2dd4c08ff0be/",
+    "age": "47 seconds",
+    "size": "766 KB",
+    "requests": "28",
+    "ips": "3",
+    "threats": "2",
+    "country": "NL",
+    "status": "public",
+    "verdict": "Error",
+    "verdict_metadata": {
+      "error": "Message: \nStacktrace:\n0   chromedriver                        0x0000000104d03184 cxxbridge1$str$ptr + 3626716\n1   chromedriver                        0x0000000104cfb9d4 cxxbridge1$str$ptr + 3596076\n2   chromedriver                        0x0000000104768968 cxxbridge1$string$len + 89228\n3   chromedriver                        0x00000001047acd50 cxxbridge1$string$len + 368756\n4   chromedriver                        0x00000001047e65b4 cxxbridge1$string$len + 604376\n5   chromedriver                        0x00000001047a1568 cxxbridge1$string$len + 321676\n6   chromedriver                        0x00000001047a21b8 cxxbridge1$string$len + 324828\n7   chromedriver                        0x0000000104cce9ac cxxbridge1$str$ptr + 3411716\n8   chromedriver                        0x0000000104cd1ccc cxxbridge1$str$ptr + 3424804\n9   chromedriver                        0x0000000104cb586c cxxbridge1$str$ptr + 3308996\n10  chromedriver                        0x0000000104cd258c cxxbridge1$str$ptr + 3427044\n11  chromedriver                        0x0000000104ca709c cxxbridge1$str$ptr + 3249652\n12  chromedriver                        0x0000000104cec4b8 cxxbridge1$str$ptr + 3533328\n13  chromedriver                        0x0000000104cec634 cxxbridge1$str$ptr + 3533708\n14  chromedriver                        0x0000000104cfb648 cxxbridge1$str$ptr + 3595168\n15  libsystem_pthread.dylib             0x000000019bb082e4 _pthread_start + 136\n16  libsystem_pthread.dylib             0x000000019bb030fc thread_start + 8\n"
+    }
+  },
+  {
+    "timestamp": "2024-12-28T23:33:52.399760",
+    "url": "mirror.news.exclusievekortingen.nl/?eis=MCsNiya%7e0E99-xl51Bj09gBOmhmRPrW3QSygM...",
+    "scan_url": "https://urlscan.io/result/27832908-b066-4fd0-81b6-3540c2cd742b/",
+    "age": "48 seconds",
+    "size": "1020 KB",
+    "requests": "17",
+    "ips": "3",
+    "threats": "2",
+    "country": "FR",
+    "status": "public",
+    "verdict": "Error",
+    "verdict_metadata": {
+      "error": "Message: \nStacktrace:\n0   chromedriver                        0x0000000104647184 cxxbridge1$str$ptr + 3626716\n1   chromedriver                        0x000000010463f9d4 cxxbridge1$str$ptr + 3596076\n2   chromedriver                        0x00000001040ac968 cxxbridge1$string$len + 89228\n3   chromedriver                        0x00000001040f0d50 cxxbridge1$string$len + 368756\n4   chromedriver                        0x000000010412a5b4 cxxbridge1$string$len + 604376\n5   chromedriver                        0x00000001040e5568 cxxbridge1$string$len + 321676\n6   chromedriver                        0x00000001040e61b8 cxxbridge1$string$len + 324828\n7   chromedriver                        0x00000001046129ac cxxbridge1$str$ptr + 3411716\n8   chromedriver                        0x0000000104615ccc cxxbridge1$str$ptr + 3424804\n9   chromedriver                        0x00000001045f986c cxxbridge1$str$ptr + 3308996\n10  chromedriver                        0x000000010461658c cxxbridge1$str$ptr + 3427044\n11  chromedriver                        0x00000001045eb09c cxxbridge1$str$ptr + 3249652\n12  chromedriver                        0x00000001046304b8 cxxbridge1$str$ptr + 3533328\n13  chromedriver                        0x0000000104630634 cxxbridge1$str$ptr + 3533708\n14  chromedriver                        0x000000010463f648 cxxbridge1$str$ptr + 3595168\n15  libsystem_pthread.dylib             0x000000019bb082e4 _pthread_start + 136\n16  libsystem_pthread.dylib             0x000000019bb030fc thread_start + 8\n"
+    }
+  },
+  {
+    "timestamp": "2024-12-28T23:33:52.399801",
+    "url": "www.youronlinept.com/",
+    "scan_url": "https://urlscan.io/result/a4fd0189-296b-4a78-8581-91a478640125/",
+    "age": "53 seconds",
+    "size": "222 KB",
+    "requests": "16",
+    "ips": "4",
+    "threats": "2",
+    "country": "US",
+    "status": "public",
+    "verdict": "Error",
+    "verdict_metadata": {
+      "error": "Message: \nStacktrace:\n0   chromedriver                        0x00000001034af184 cxxbridge1$str$ptr + 3626716\n1   chromedriver                        0x00000001034a79d4 cxxbridge1$str$ptr + 3596076\n2   chromedriver                        0x0000000102f14968 cxxbridge1$string$len + 89228\n3   chromedriver                        0x0000000102f58d50 cxxbridge1$string$len + 368756\n4   chromedriver                        0x0000000102f925b4 cxxbridge1$string$len + 604376\n5   chromedriver                        0x0000000102f4d568 cxxbridge1$string$len + 321676\n6   chromedriver                        0x0000000102f4e1b8 cxxbridge1$string$len + 324828\n7   chromedriver                        0x000000010347a9ac cxxbridge1$str$ptr + 3411716\n8   chromedriver                        0x000000010347dccc cxxbridge1$str$ptr + 3424804\n9   chromedriver                        0x000000010346186c cxxbridge1$str$ptr + 3308996\n10  chromedriver                        0x000000010347e58c cxxbridge1$str$ptr + 3427044\n11  chromedriver                        0x000000010345309c cxxbridge1$str$ptr + 3249652\n12  chromedriver                        0x00000001034984b8 cxxbridge1$str$ptr + 3533328\n13  chromedriver                        0x0000000103498634 cxxbridge1$str$ptr + 3533708\n14  chromedriver                        0x00000001034a7648 cxxbridge1$str$ptr + 3595168\n15  libsystem_pthread.dylib             0x000000019bb082e4 _pthread_start + 136\n16  libsystem_pthread.dylib             0x000000019bb030fc thread_start + 8\n"
+    }
+  },
+  {
+    "timestamp": "2024-12-28T23:33:52.399843",
+    "url": "service-transport-colis.com/login_up.php",
+    "scan_url": "https://urlscan.io/result/1bef27f9-1dcc-4f60-b89a-8c8bfa61fd16/",
+    "age": "55 seconds",
+    "size": "1 MB",
+    "requests": "22",
+    "ips": "4",
+    "threats": "2",
+    "country": "RO",
+    "status": "public",
+    "verdict": "Error",
+    "verdict_metadata": {
+      "error": "Message: \nStacktrace:\n0   chromedriver                        0x00000001033eb184 cxxbridge1$str$ptr + 3626716\n1   chromedriver                        0x00000001033e39d4 cxxbridge1$str$ptr + 3596076\n2   chromedriver                        0x0000000102e50968 cxxbridge1$string$len + 89228\n3   chromedriver                        0x0000000102e94d50 cxxbridge1$string$len + 368756\n4   chromedriver                        0x0000000102ece5b4 cxxbridge1$string$len + 604376\n5   chromedriver                        0x0000000102e89568 cxxbridge1$string$len + 321676\n6   chromedriver                        0x0000000102e8a1b8 cxxbridge1$string$len + 324828\n7   chromedriver                        0x00000001033b69ac cxxbridge1$str$ptr + 3411716\n8   chromedriver                        0x00000001033b9ccc cxxbridge1$str$ptr + 3424804\n9   chromedriver                        0x000000010339d86c cxxbridge1$str$ptr + 3308996\n10  chromedriver                        0x00000001033ba58c cxxbridge1$str$ptr + 3427044\n11  chromedriver                        0x000000010338f09c cxxbridge1$str$ptr + 3249652\n12  chromedriver                        0x00000001033d44b8 cxxbridge1$str$ptr + 3533328\n13  chromedriver                        0x00000001033d4634 cxxbridge1$str$ptr + 3533708\n14  chromedriver                        0x00000001033e3648 cxxbridge1$str$ptr + 3595168\n15  libsystem_pthread.dylib             0x000000019bb082e4 _pthread_start + 136\n16  libsystem_pthread.dylib             0x000000019bb030fc thread_start + 8\n"
+    }
+  }
+]
