@@ -1,3 +1,8 @@
+import concurrent
+import queue
+import random
+from threading import Thread
+import requests
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
@@ -12,8 +17,167 @@ from datetime import datetime
 import logging
 from typing import List, Dict, Any, Optional
 import os
-from multiprocessing import Pool, cpu_count
+from multiprocessing import Pool, cpu_count, Lock
 
+
+class ProxyHandler:
+    def __init__(self, max_proxies: int = 10):
+        self.max_proxies = max_proxies
+        self.working_proxies: List[Dict] = []
+        self.proxy_lock = Lock()
+        self.setup_logging()
+
+    def setup_logging(self):
+        """Configure logging settings"""
+        logging.basicConfig(
+            level=logging.INFO,
+            format='%(asctime)s - %(levelname)s - %(message)s'
+        )
+
+    def fetch_free_proxies(self) -> List[Dict]:
+        """Fetch free proxies from multiple sources"""
+        proxies = []
+
+        # Source 1: free-proxy-list.net
+        try:
+            response = requests.get('https://free-proxy-list.net/', timeout=10)
+            soup = BeautifulSoup(response.text, 'html.parser')
+            proxy_table = soup.find('table')
+
+            if proxy_table:
+                rows = proxy_table.find_all('tr')[1:]  # Skip header
+                for row in rows:
+                    cols = row.find_all('td')
+                    if len(cols) >= 7:
+                        ip = cols[0].text.strip()
+                        port = cols[1].text.strip()
+                        https = cols[6].text.strip()
+                        if https == 'yes':
+                            proxies.append({
+                                'http': f'http://{ip}:{port}',
+                                'https': f'http://{ip}:{port}'
+                            })
+        except Exception as e:
+            logging.error(f"Error fetching from free-proxy-list.net: {e}")
+
+        # Source 2: proxyscrape.com API
+        try:
+            response = requests.get(
+                'https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=5000&country=all&ssl=yes&anonymity=all',
+                timeout=10
+            )
+            for line in response.text.split('\n'):
+                if ':' in line:
+                    ip, port = line.strip().split(':')
+                    proxies.append({
+                        'http': f'http://{ip}:{port}',
+                        'https': f'http://{ip}:{port}'
+                    })
+        except Exception as e:
+            logging.error(f"Error fetching from proxyscrape.com: {e}")
+
+        # Source 3: geonode.com API
+        try:
+            response = requests.get(
+                'https://proxylist.geonode.com/api/proxy-list?limit=100&page=1&sort_by=lastChecked&sort_type=desc&protocols=http%2Chttps',
+                timeout=10
+            )
+            data = response.json()
+            for proxy in data.get('data', []):
+                ip = proxy.get('ip')
+                port = proxy.get('port')
+                if ip and port:
+                    proxies.append({
+                        'http': f'http://{ip}:{port}',
+                        'https': f'https://{ip}:{port}'
+                    })
+        except Exception as e:
+            logging.error(f"Error fetching from geonode.com: {e}")
+
+        return proxies
+
+    def validate_proxy(self, proxy: Dict) -> bool:
+        """Validate a single proxy by testing connection to a reliable website"""
+        test_urls = [
+            'https://www.google.com',
+            'https://www.cloudflare.com',
+            'https://www.amazon.com'
+        ]
+
+        try:
+            # Test with a random URL from the list
+            test_url = random.choice(test_urls)
+            response = requests.get(
+                test_url,
+                proxies=proxy,
+                timeout=5,
+                headers={
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
+            )
+            return response.status_code == 200
+        except Exception:
+            return False
+
+    def validate_proxies_worker(self, proxy_queue: queue.Queue, valid_proxies: List[Dict], max_valid: int):
+        """Worker function to validate proxies"""
+        while True:
+            try:
+                proxy = proxy_queue.get_nowait()
+            except queue.Empty:
+                break
+
+            if self.validate_proxy(proxy):
+                with self.proxy_lock:
+                    if len(valid_proxies) < max_valid:
+                        valid_proxies.append(proxy)
+                        logging.info(f"Found working proxy: {proxy}")
+
+            proxy_queue.task_done()
+
+    def validate_proxies(self, proxies: List[Dict]) -> List[Dict]:
+        """Validate multiple proxies using threading"""
+        proxy_queue = queue.Queue()
+        valid_proxies = []
+
+        # Fill the queue with proxies
+        for proxy in proxies:
+            proxy_queue.put(proxy)
+
+        # Create and start worker threads
+        num_threads = min(20, len(proxies))
+        threads = []
+        for _ in range(num_threads):
+            t = Thread(target=self.validate_proxies_worker,
+                       args=(proxy_queue, valid_proxies, self.max_proxies))
+            t.daemon = True
+            t.start()
+            threads.append(t)
+
+        # Wait for all proxies to be processed
+        proxy_queue.join()
+
+        # Wait for all threads to complete
+        for t in threads:
+            t.join()
+
+        return valid_proxies[:self.max_proxies]
+
+    def get_working_proxy(self) -> Optional[Dict]:
+        """Get a random working proxy from the pool"""
+        if not self.working_proxies:
+            logging.info("Fetching and validating new proxies...")
+            proxies = self.fetch_free_proxies()
+            self.working_proxies = self.validate_proxies(proxies)
+
+        if self.working_proxies:
+            return random.choice(self.working_proxies)
+        return None
+
+    def refresh_proxies(self):
+        """Refresh the proxy pool"""
+        logging.info("Refreshing proxy pool...")
+        proxies = self.fetch_free_proxies()
+        self.working_proxies = self.validate_proxies(proxies)
 
 class URLScanRecentScraper:
     def __init__(self, output_file: str = "urlscan_results.json", verdicts_file: str = "urlscan_verdicts.json"):
@@ -23,6 +187,7 @@ class URLScanRecentScraper:
         self.seen_urls = set()
         self.setup_logging()
         self.driver = None
+        self.proxy_handler = ProxyHandler(max_proxies=5)
         self.setup_driver()
 
     def setup_logging(self):
@@ -33,7 +198,7 @@ class URLScanRecentScraper:
         )
 
     def setup_driver(self):
-        """Setup Chrome driver with proper error handling"""
+        """Setup Chrome driver with proxy support and proper error handling"""
         try:
             chrome_options = Options()
             chrome_options.add_argument('--headless=new')
@@ -43,6 +208,13 @@ class URLScanRecentScraper:
             chrome_options.add_argument('--window-size=1920,1080')
             chrome_options.add_argument('--disable-notifications')
             chrome_options.add_argument('--disable-popup-blocking')
+
+            # Add proxy if available
+            proxy = self.proxy_handler.get_working_proxy()
+            if proxy:
+                proxy_server = proxy['https']
+                chrome_options.add_argument(f'--proxy-server={proxy_server}')
+                logging.info(f"Using proxy: {proxy_server}")
 
             user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
             chrome_options.add_argument(f'user-agent={user_agent}')
@@ -107,7 +279,7 @@ class URLScanRecentScraper:
 
     @staticmethod
     def create_driver():
-        """Create a new Chrome driver instance for multiprocessing"""
+        """Create a new Chrome driver instance for multiprocessing with proxy support"""
         chrome_options = Options()
         chrome_options.add_argument('--headless=new')
         chrome_options.add_argument('--no-sandbox')
@@ -116,6 +288,13 @@ class URLScanRecentScraper:
         chrome_options.add_argument('--window-size=1920,1080')
         chrome_options.add_argument('--disable-notifications')
         chrome_options.add_argument('--disable-popup-blocking')
+
+        # Create a new proxy handler for this process
+        proxy_handler = ProxyHandler(max_proxies=1)
+        proxy = proxy_handler.get_working_proxy()
+        if proxy:
+            proxy_server = proxy['https']
+            chrome_options.add_argument(f'--proxy-server={proxy_server}')
 
         user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
         chrome_options.add_argument(f'user-agent={user_agent}')
@@ -367,7 +546,7 @@ class URLScanRecentScraper:
             logging.error(f"Error saving results: {e}")
 
     def restart_driver(self):
-        """Safely restart the Chrome driver"""
+        """Safely restart the Chrome driver with a new proxy"""
         try:
             if self.driver:
                 self.driver.quit()
@@ -375,6 +554,11 @@ class URLScanRecentScraper:
             pass
 
         time.sleep(5)
+
+        # Refresh proxy pool periodically
+        if random.random() < 0.2:  # 20% chance to refresh the entire proxy pool
+            self.proxy_handler.refresh_proxies()
+
         self.setup_driver()
 
     def monitor_recent_scans(self, duration_minutes: int = 60, interval_seconds: int = 15):
