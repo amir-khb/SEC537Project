@@ -3,13 +3,12 @@ import logging
 import json
 import os
 from datetime import datetime
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any
 from bs4 import BeautifulSoup
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from multiprocessing import Process, Queue, Value, Lock
-import threading
+from multiprocessing import Queue, Value, Lock
 from queue import Empty
 import tqdm
 import webdriver_utils
