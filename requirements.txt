@@ -1,0 +1,6 @@
+tqdm
+beautifulsoup4
+selenium
+webdriver_manager
+requests
+multiprocessing
