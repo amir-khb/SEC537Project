@@ -36,6 +36,7 @@ def save_results(results: List[Dict[str, Any]], output_file: str, is_verdict: bo
                 existing_data = json.load(f)
 
         if is_verdict:
+            # Only filter for malicious if this is the verdicts file
             results = [r for r in results if r['verdict'].lower() == 'malicious']
             if not results:
                 return
@@ -51,11 +52,11 @@ def save_results(results: List[Dict[str, Any]], output_file: str, is_verdict: bo
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(existing_data, f, indent=2, ensure_ascii=False)
 
-        # Update statistics if we're saving verdicts
-        if is_verdict:
-            stats_file = "urlscan_statistics.txt"
-            results_file = "urlscan_results.json"
-            update_statistics(output_file, results_file, stats_file)
+        # Update statistics with correct file order
+        stats_file = "urlscan_statistics.txt"
+        verdicts_file = "urlscan_verdicts.json"  # This should be your verdicts file
+        results_file = "urlscan_results.json"    # This should be your results file
+        update_statistics(verdicts_file, results_file, stats_file)
 
     except Exception as e:
         logging.error(f"Error saving results: {str(e)}")
@@ -161,14 +162,18 @@ def verdict_consumer(url_queue: Queue, backlog_count: Value, backlog_lock: Lock,
 
             # Save results
             if result:
+                # Save all results to the main results file
                 save_results([result], output_file, is_verdict=False)
+
+                # Only save malicious verdicts to the verdicts file
                 if result.get('verdict', '').lower() == 'malicious':
-                    save_results([{
+                    verdict_data = {
                         'url': result['url'],
                         'scan_url': result['scan_url'],
                         'verdict': result['verdict'],
                         'metadata': result['verdict_metadata']
-                    }], verdicts_file, is_verdict=True)
+                    }
+                    save_results([verdict_data], verdicts_file, is_verdict=True)
 
             # Update backlog count
             with backlog_lock:

@@ -9,7 +9,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_utils import create_chrome_driver
 
-
 def process_verdict(scan_data: Dict[str, Any], max_retries: int = 5) -> Dict[str, Any]:
     """Process a single verdict with retry logic"""
     retry_count = 0
@@ -31,18 +30,10 @@ def process_verdict(scan_data: Dict[str, Any], max_retries: int = 5) -> Dict[str
             # Additional wait for dynamic content
             time.sleep(5)
 
-            # Try to wait for brand information
-            try:
-                brand_info = wait.until(
-                    EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Targeting these brands:')]"))
-                )
-            except Exception:
-                pass
-
             html_content = driver.page_source
             soup = BeautifulSoup(html_content, 'html.parser')
 
-            verdict_data = extract_verdict_data(soup, scan_url)
+            verdict_data = extract_verdict_data(soup, driver, scan_url)
             scan_data.update(verdict_data)
             break
 
@@ -61,8 +52,7 @@ def process_verdict(scan_data: Dict[str, Any], max_retries: int = 5) -> Dict[str
 
     return scan_data
 
-
-def extract_verdict_data(soup: BeautifulSoup, scan_url: str) -> Dict[str, Any]:
+def extract_verdict_data(soup: BeautifulSoup, driver, scan_url: str) -> Dict[str, Any]:
     """Extract verdict information from the page"""
     verdict = "No classification"
     verdict_metadata = {
@@ -70,7 +60,8 @@ def extract_verdict_data(soup: BeautifulSoup, scan_url: str) -> Dict[str, Any]:
         'scan_url': scan_url,
         'targeted_brands': [],
         'location': None,
-        'asn_org': None
+        'asn_org': None,
+        'detected_technologies': []
     }
 
     # Extract ASN information from summary panel
@@ -102,61 +93,88 @@ def extract_verdict_data(soup: BeautifulSoup, scan_url: str) -> Dict[str, Any]:
         verdict = "Malicious"
         is_malicious = True
 
-    # Only proceed with brand checking if the verdict is malicious
+    # Only proceed with brand and technology checking if the verdict is malicious
     if is_malicious:
+        # Extract targeted brands
         try:
-            # First try to find the targeting text itself
             targeting_section = soup.find(string=lambda text: text and 'Targeting these brands:' in str(text))
             if targeting_section:
-                # Look for brand tags in the parent or next siblings
                 parent = targeting_section.parent
                 if parent:
-                    print("Found targeting section in malicious verdict")
-
-                    # Look for brand tags in multiple ways
-                    brand_tags = []
-                    brand_tags.extend(parent.parent.find_all('span', class_='simpletag'))
-
-                    # If no simpletag, try finding any span with flag-icon
-                    if not brand_tags:
-                        brand_tags.extend(parent.parent.find_all('span', class_=lambda x: x and 'flag-icon-' in x))
-
-                    print(f"Found {len(brand_tags)} potential brand tags")
-
+                    brand_tags = parent.parent.find_all('span', class_='simpletag')
                     for brand_tag in brand_tags:
-                        # Find flag icon which might be in the current tag or a child
-                        flag = brand_tag.find('span', class_=lambda x: x and 'flag-icon-' in x)
-                        if not flag:
-                            flag = brand_tag if 'flag-icon-' in brand_tag.get('class', []) else None
+                        brand_text = brand_tag.get_text(strip=True)
+                        if '(' in brand_text:
+                            brand_parts = brand_text.split('(')
+                            brand_name = brand_parts[0].strip()
+                            brand_category = brand_parts[1].replace(')', '').strip()
+                        else:
+                            brand_name = brand_text
+                            brand_category = "Unknown"
 
-                        if flag:
-                            country_code = [c for c in flag.get('class') if 'flag-icon-' in c][0]
-                            country_code = country_code.replace('flag-icon-', '').upper()
+                        verdict_metadata['targeted_brands'].append({
+                            'name': brand_name,
+                            'category': brand_category
+                        })
+        except Exception as e:
+            logging.exception("Error in brand extraction")
 
-                            # Get brand text, handling different structures
-                            brand_text = brand_tag.get_text(strip=True)
-                            print(f"Processing brand text: {brand_text}")
+        # Extract detected technologies
+        try:
+            expand_buttons = driver.find_elements(By.XPATH, "//a[@data-toggle='collapse']")
+            for button in expand_buttons:
+                target_id = button.get_attribute("data-target")  # e.g., #collapse-wappa-jQuery
+                associated_section = driver.find_element(By.CSS_SELECTOR, target_id)
 
-                            # Try different text patterns
-                            if '(' in brand_text:
-                                brand_parts = brand_text.split('(')
-                                brand_name = brand_parts[0].strip()
-                                brand_category = brand_parts[1].replace(')', '').strip()
-                            else:
-                                # If no category in parentheses, try to infer
-                                brand_name = brand_text
-                                brand_category = "Unknown"
+                # Skip if already expanded
+                if "in" in associated_section.get_attribute("class"):
+                    continue
 
-                            verdict_metadata['targeted_brands'].append({
-                                'name': brand_name,
-                                'category': brand_category,
-                                'country': country_code
-                            })
-                            print(f"Added brand: {brand_name} ({brand_category}) from {country_code}")
+                # Click the button to expand the section
+                driver.execute_script("arguments[0].click();", button)
+
+                # Wait for the section to expand
+                WebDriverWait(driver, 5).until(
+                    lambda d: "in" in associated_section.get_attribute("class")
+                )
+
+            # Re-fetch the updated page source
+            updated_html = driver.page_source
+            updated_soup = BeautifulSoup(updated_html, 'html.parser')
+
+            # Process expanded sections
+            collapsed_sections = updated_soup.find_all("div", class_="collapse")
+            for section in collapsed_sections:
+                if "in" in section.get("class", []):
+                    tech_name = section.find_previous("b").get_text(strip=True)
+
+                    # Skip 'Resource Hash' and 'Security Headers'
+                    if tech_name in ["Resource Hash", "Security Headers"]:
+                        continue
+
+                    # Extract full confidence information
+                    confidence_element = section.find(string=re.compile(r'Overall confidence'))
+                    if confidence_element:
+                        # Locate parent or sibling element for the full confidence text
+                        confidence_parent = confidence_element.parent
+                        confidence_value = confidence_parent.find_next(string=re.compile(r'\d+%'))
+                        if confidence_value:
+                            confidence_text = f"{confidence_element.strip()} {confidence_value.strip()}"
+                        else:
+                            confidence_text = confidence_element.strip()
+                    else:
+                        confidence_text = None
+
+                    detected_patterns = [li.get_text(strip=True) for li in section.find_all("li")]
+
+                    verdict_metadata['detected_technologies'].append({
+                        'technology': tech_name,
+                        'confidence': confidence_text,
+                        'patterns': detected_patterns
+                    })
 
         except Exception as e:
-            print(f"Error extracting brand information for malicious verdict: {str(e)}")
-            logging.exception("Error in brand extraction")
+            logging.exception("Error in technology extraction")
 
     return {
         'verdict': verdict,
