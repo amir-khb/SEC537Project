@@ -1,0 +1,2997 @@
+[
+  {
+    "url": "terbitcom.autos/",
+    "scan_url": "https://urlscan.io/result/737a4bdc-3684-4b10-af09-9b3f9015b49e/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T11:33:00.014903",
+      "scan_url": "https://urlscan.io/result/737a4bdc-3684-4b10-af09-9b3f9015b49e/",
+      "targeted_brands": [],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Bootstrap",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]*?bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.css",
+            "bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "AMP",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link rel=\"amphtml\""
+          ]
+        },
+        {
+          "technology": "LiveChat",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "cdn\\.livechatinc\\.com/.*tracking\\.js"
+          ]
+        },
+        {
+          "technology": "Facebook",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "//connect\\.facebook\\.([a-z]+)/[^/]*/[a-z]*\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        },
+        {
+          "technology": "jsDelivr",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link [^>]*?href=\"?[a-zA-Z]*?:?//cdn\\.jsdelivr\\.net/",
+            "//cdn\\.jsdelivr\\.net/"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "blessorigins.online/",
+    "scan_url": "https://urlscan.io/result/fd6b8af0-e5a4-458d-859b-93d12ec683e9/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T11:55:47.113649",
+      "scan_url": "https://urlscan.io/result/fd6b8af0-e5a4-458d-859b-93d12ec683e9/",
+      "targeted_brands": [],
+      "location": "BG",
+      "asn_org": "BULSATCOM-BG-AS Vivacom Bulgaria EAD, BG",
+      "detected_technologies": [
+        {
+          "technology": "Bootstrap",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]*?bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.css",
+            "bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "Google Font API",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+fonts\\.(?:googleapis|google)\\.com"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/([\\d.]+)/jquery(?:\\.min)?\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        },
+        {
+          "technology": "reCAPTCHA",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<div[^>]+class=\"g-recaptcha\"",
+            "/recaptcha/api\\.js"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "jpxvn.net/Trade/index?type=buy&symbol=BTC",
+    "scan_url": "https://urlscan.io/result/01d3b8b1-38b8-4b88-bd4c-51e855d1b043/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T12:02:22.565061",
+      "scan_url": "https://urlscan.io/result/01d3b8b1-38b8-4b88-bd4c-51e855d1b043/",
+      "targeted_brands": [
+        {
+          "name": "Generic Crypto",
+          "category": "Crypto Exchange"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Bootstrap",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]*?bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.css",
+            "bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "/([\\d.]+)/jquery(?:\\.min)?\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        },
+        {
+          "technology": "jsDelivr",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link [^>]*?href=\"?[a-zA-Z]*?:?//cdn\\.jsdelivr\\.net/",
+            "//cdn\\.jsdelivr\\.net/"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "alphaglobaloneo.com/index/index/landing.html",
+    "scan_url": "https://urlscan.io/result/dd941746-83be-4316-8dcf-c1da85979227/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T13:08:59.974686",
+      "scan_url": "https://urlscan.io/result/dd941746-83be-4316-8dcf-c1da85979227/",
+      "targeted_brands": [],
+      "location": "HK",
+      "asn_org": "CTGSERVERLIMITED-AS-AP CTG Server Limited, HK",
+      "detected_technologies": [
+        {
+          "technology": "Google Font API",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+fonts\\.(?:googleapis|google)\\.com"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        },
+        {
+          "technology": "jsDelivr",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link [^>]*?href=\"?[a-zA-Z]*?:?//cdn\\.jsdelivr\\.net/",
+            "//cdn\\.jsdelivr\\.net/"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "robuxyus.live/",
+    "scan_url": "https://urlscan.io/result/28d4b3ba-7672-4490-be73-6cb85965f2e7/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T13:11:01.994756",
+      "scan_url": "https://urlscan.io/result/28d4b3ba-7672-4490-be73-6cb85965f2e7/",
+      "targeted_brands": [],
+      "location": "DE",
+      "asn_org": "HETZNER-AS Hetzner Online GmbH, DE",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "valihio8.best/",
+    "scan_url": "https://urlscan.io/result/fe6ed703-8fff-4114-8c10-fecbb6b6d45a/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T13:13:56.852259",
+      "scan_url": "https://urlscan.io/result/fe6ed703-8fff-4114-8c10-fecbb6b6d45a/",
+      "targeted_brands": [],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Vue.js",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<[^>]+\\sdata-v(?:ue)?-"
+          ]
+        },
+        {
+          "technology": "Google Font API",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+fonts\\.(?:googleapis|google)\\.com"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "pasapic.com/index.html",
+    "scan_url": "https://urlscan.io/result/9bbef19f-1345-426a-a84a-d57872e4aaca/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T13:39:25.388357",
+      "scan_url": "https://urlscan.io/result/9bbef19f-1345-426a-a84a-d57872e4aaca/",
+      "targeted_brands": [
+        {
+          "name": "imToken",
+          "category": "Crypto"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "jpxvn.net/Contract/index?coin=DOGE",
+    "scan_url": "https://urlscan.io/result/2c20649b-7da3-488c-9d0c-9214edfeef88/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T13:51:47.089628",
+      "scan_url": "https://urlscan.io/result/2c20649b-7da3-488c-9d0c-9214edfeef88/",
+      "targeted_brands": [
+        {
+          "name": "Generic Crypto",
+          "category": "Crypto Exchange"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Bootstrap",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]*?bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.css",
+            "bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "/([\\d.]+)/jquery(?:\\.min)?\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        },
+        {
+          "technology": "jsDelivr",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link [^>]*?href=\"?[a-zA-Z]*?:?//cdn\\.jsdelivr\\.net/",
+            "//cdn\\.jsdelivr\\.net/"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "zipezuu.shop/",
+    "scan_url": "https://urlscan.io/result/944c1970-1a86-4380-b9a2-163aebaeffcb/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T13:54:50.430176",
+      "scan_url": "https://urlscan.io/result/944c1970-1a86-4380-b9a2-163aebaeffcb/",
+      "targeted_brands": [],
+      "location": "US",
+      "asn_org": "DIGITALOCEAN-ASN, US",
+      "detected_technologies": [
+        {
+          "technology": "WordPress",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link rel=[\"']stylesheet[\"'] [^>]+/wp-(?:content|includes)/",
+            "/wp-(?:content|includes)/"
+          ]
+        },
+        {
+          "technology": "Yoast SEO",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<!-- This site is optimized with the Yoast (?:WordPress )?SEO plugin v([\\d.]+) -"
+          ]
+        },
+        {
+          "technology": "Font Awesome",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "(?:F|f)o(?:n|r)t-?(?:A|a)wesome(?:.*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)"
+          ]
+        },
+        {
+          "technology": "Google Analytics",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            ""
+          ]
+        },
+        {
+          "technology": "Google Tag Manager",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "googletagmanager\\.com/gtag/js"
+          ]
+        },
+        {
+          "technology": "Lightbox",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link [^>]*href=\"[^\"]+lightbox(?:\\.min)?\\.css",
+            "lightbox(?:-plus-jquery)?.{0,32}\\.js"
+          ]
+        },
+        {
+          "technology": "Modernizr",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "([\\d.]+)?/modernizr(?:\\.([\\d.]+))?.*\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        },
+        {
+          "technology": "jQuery Migrate",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]migrate(?:-([\\d.]+))?(?:\\.min)?\\.js(?:\\?ver=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "www.stussys-paris.com/",
+    "scan_url": "https://urlscan.io/result/d4b8ae40-72ad-4743-bc23-ddc420b2b743/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T14:10:04.611833",
+      "scan_url": "https://urlscan.io/result/d4b8ae40-72ad-4743-bc23-ddc420b2b743/",
+      "targeted_brands": [
+        {
+          "name": "Fake Shop",
+          "category": "Fashion"
+        }
+      ],
+      "location": "GB",
+      "asn_org": "PacketExchange Orion Network Limited, GB",
+      "detected_technologies": [
+        {
+          "technology": "Google Font API",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+fonts\\.(?:googleapis|google)\\.com"
+          ]
+        },
+        {
+          "technology": "Lightbox",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link [^>]*href=\"[^\"]+lightbox(?:\\.min)?\\.css",
+            "lightbox(?:-plus-jquery)?.{0,32}\\.js"
+          ]
+        },
+        {
+          "technology": "Modernizr",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "([\\d.]+)?/modernizr(?:\\.([\\d.]+))?.*\\.js"
+          ]
+        },
+        {
+          "technology": "Slick",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "(?:/([\\d.]+))?/slick(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "api-smartdappsfix.pages.dev/",
+    "scan_url": "https://urlscan.io/result/da7b829b-e76a-4b61-a805-932e2c9c5899/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T14:10:54.660176",
+      "scan_url": "https://urlscan.io/result/da7b829b-e76a-4b61-a805-932e2c9c5899/",
+      "targeted_brands": [
+        {
+          "name": "Generic Crypto",
+          "category": "Crypto Exchange"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "SweetAlert2",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/npm/sweetalert2@([\\d.]+)"
+          ]
+        },
+        {
+          "technology": "jsDelivr",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "//cdn\\.jsdelivr\\.net/"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "akdoorsteps.com/xo268_296",
+    "scan_url": "https://urlscan.io/result/8d1cf802-ff99-449d-a3f3-3a6c8b7944e5/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T14:25:54.115065",
+      "scan_url": "https://urlscan.io/result/8d1cf802-ff99-449d-a3f3-3a6c8b7944e5/",
+      "targeted_brands": [
+        {
+          "name": "Generic Cloudflare",
+          "category": "Online"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Bootstrap",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "Lightbox",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "lightbox(?:-plus-jquery)?.{0,32}\\.js"
+          ]
+        },
+        {
+          "technology": "jsDelivr",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "//cdn\\.jsdelivr\\.net/"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "moviesjoytv.to/",
+    "scan_url": "https://urlscan.io/result/39b9c581-637c-4278-9671-549392da0572/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T14:29:08.007302",
+      "scan_url": "https://urlscan.io/result/39b9c581-637c-4278-9671-549392da0572/",
+      "targeted_brands": [
+        {
+          "name": "Generic Cloudflare",
+          "category": "Online"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "mayastashok.weebly.com/",
+    "scan_url": "https://urlscan.io/result/9c267f00-c98b-4456-b910-e9728692db48/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T14:47:59.889363",
+      "scan_url": "https://urlscan.io/result/9c267f00-c98b-4456-b910-e9728692db48/",
+      "targeted_brands": [],
+      "location": "US",
+      "asn_org": "WEEBLY, US",
+      "detected_technologies": [
+        {
+          "technology": "Weebly",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "cdn\\d+\\.editmysite\\.com"
+          ]
+        },
+        {
+          "technology": "Facebook",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "//connect\\.facebook\\.([a-z]+)/[^/]*/[a-z]*\\.js"
+          ]
+        },
+        {
+          "technology": "Google Analytics",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "google-analytics\\.com/(?:ga|urchin|analytics)\\.js"
+          ]
+        },
+        {
+          "technology": "Google Font API",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+fonts\\.(?:googleapis|google)\\.com"
+          ]
+        },
+        {
+          "technology": "Twitter",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "//platform\\.twitter\\.com/widgets\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/([\\d.]+)/jquery(?:\\.min)?\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "www.sselaser.com/xo268",
+    "scan_url": "https://urlscan.io/result/7ab58160-5e1b-44dd-b2cc-e9aeb358d535/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T15:01:52.724442",
+      "scan_url": "https://urlscan.io/result/7ab58160-5e1b-44dd-b2cc-e9aeb358d535/",
+      "targeted_brands": [
+        {
+          "name": "Generic Cloudflare",
+          "category": "Online"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Squarespace Commerce",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "assets\\.squarespace\\.\\w+/universal/scripts-compressed/commerce-\\w+-min\\.[\\w+\\-]+\\.js"
+          ]
+        },
+        {
+          "technology": "Lightbox",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "lightbox(?:-plus-jquery)?.{0,32}\\.js"
+          ]
+        },
+        {
+          "technology": "TrustArc",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "consent\\.trustarc\\.com"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "exhibitmediasworking.com/",
+    "scan_url": "https://urlscan.io/result/9cf6bc21-6750-48c1-9e42-424b56f22497/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T15:06:48.158118",
+      "scan_url": "https://urlscan.io/result/9cf6bc21-6750-48c1-9e42-424b56f22497/",
+      "targeted_brands": [],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Exhibit",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "exhibit.*\\.js"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "ffatric1.com/",
+    "scan_url": "https://urlscan.io/result/57d11d99-3c9a-4af0-982d-02874f93ab98/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T15:09:33.536743",
+      "scan_url": "https://urlscan.io/result/57d11d99-3c9a-4af0-982d-02874f93ab98/",
+      "targeted_brands": [],
+      "location": "US",
+      "asn_org": "DOSARREST, US",
+      "detected_technologies": [
+        {
+          "technology": "WordPress",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/wp-(?:content|includes)/"
+          ]
+        },
+        {
+          "technology": "Bootstrap",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]*?bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.css",
+            "bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "Font Awesome",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+(?:([\\d.]+)/)?(?:css/)?font-awesome(?:\\.min)?\\.css",
+            "<link[^>]* href=[^>]*?(?:F|f)o(?:n|r)t-?(?:A|a)wesome(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)",
+            "(?:F|f)o(?:n|r)t-?(?:A|a)wesome(?:.*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)"
+          ]
+        },
+        {
+          "technology": "Google Analytics",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "google-analytics\\.com/(?:ga|urchin|analytics)\\.js",
+            ""
+          ]
+        },
+        {
+          "technology": "Google Tag Manager",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "googletagmanager\\.com/gtag/js"
+          ]
+        },
+        {
+          "technology": "Typekit",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link [^>]*href=\"[^\"]+use\\.typekit\\.(?:net|com)"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "www.bo9p68.vip/",
+    "scan_url": "https://urlscan.io/result/b96d3dbf-acd3-4333-ad53-fb327a6f7ab8/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T15:25:22.166403",
+      "scan_url": "https://urlscan.io/result/b96d3dbf-acd3-4333-ad53-fb327a6f7ab8/",
+      "targeted_brands": [],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Polyfill",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/polyfill\\.min\\.js"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "aaju0099.z14.web.core.windows.net/werrx01USAHTML/?bcda=(0101)-83394-38266",
+    "scan_url": "https://urlscan.io/result/dd8afc2f-e881-4223-8d79-36b8f1bb1d6b/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T16:38:33.790286",
+      "scan_url": "https://urlscan.io/result/dd8afc2f-e881-4223-8d79-36b8f1bb1d6b/",
+      "targeted_brands": [
+        {
+          "name": "Tech Support Scam",
+          "category": "Consumer"
+        }
+      ],
+      "location": "US",
+      "asn_org": "MICROSOFT-CORP-MSN-AS-BLOCK, US",
+      "detected_technologies": [
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "evqjteoscz.baby/",
+    "scan_url": "https://urlscan.io/result/45879fff-9f17-4ed8-a82b-c2cd92f60db6/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T16:39:52.052669",
+      "scan_url": "https://urlscan.io/result/45879fff-9f17-4ed8-a82b-c2cd92f60db6/",
+      "targeted_brands": [
+        {
+          "name": "Telegram",
+          "category": "Instant Messenger"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "www.caixadirecta-cgd.sbs/",
+    "scan_url": "https://urlscan.io/result/b41eaf01-b20b-4f52-80a3-05ea96f9e390/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T16:45:31.961781",
+      "scan_url": "https://urlscan.io/result/b41eaf01-b20b-4f52-80a3-05ea96f9e390/",
+      "targeted_brands": [],
+      "location": "US",
+      "asn_org": "NYBULA, US",
+      "detected_technologies": [
+        {
+          "technology": "Font Awesome",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "(?:F|f)o(?:n|r)t-?(?:A|a)wesome(?:.*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)"
+          ]
+        },
+        {
+          "technology": "Google Font API",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "googleapis\\.com/.+webfont"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "brookekuklinski.com/",
+    "scan_url": "https://urlscan.io/result/74d09e1e-6fdb-40d8-8330-bd0206e8df1d/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T16:57:57.328892",
+      "scan_url": "https://urlscan.io/result/74d09e1e-6fdb-40d8-8330-bd0206e8df1d/",
+      "targeted_brands": [],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "WordPress",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link rel=[\"']stylesheet[\"'] [^>]+/wp-(?:content|includes)/",
+            "/wp-(?:content|includes)/"
+          ]
+        },
+        {
+          "technology": "Yoast SEO",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<!-- This site is optimized with the Yoast (?:WordPress )?SEO plugin v([\\d.]+) -"
+          ]
+        },
+        {
+          "technology": "Font Awesome",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]*?(?:F|f)o(?:n|r)t-?(?:A|a)wesome(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)",
+            "(?:F|f)o(?:n|r)t-?(?:A|a)wesome(?:.*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)"
+          ]
+        },
+        {
+          "technology": "Google Font API",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+fonts\\.(?:googleapis|google)\\.com"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        },
+        {
+          "technology": "jQuery Migrate",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]migrate(?:-([\\d.]+))?(?:\\.min)?\\.js(?:\\?ver=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "sahibiniden.siparis-olustur-223035.com/ilan?id=3uuv8-Asus-Rog-Strix-Gaming-Lapt...",
+    "scan_url": "https://urlscan.io/result/cb600e27-b214-45f4-980b-1dc12946ebb2/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T17:02:29.851561",
+      "scan_url": "https://urlscan.io/result/cb600e27-b214-45f4-980b-1dc12946ebb2/",
+      "targeted_brands": [
+        {
+          "name": "Sahibinden",
+          "category": "Classifieds"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Axios",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/axios(@|/)([\\d.]+)(?:/[a-z]+)?/axios(?:.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "Google AdSense",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "googlesyndication\\.com/"
+          ]
+        },
+        {
+          "technology": "SweetAlert2",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/npm/sweetalert2@([\\d.]+)"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        },
+        {
+          "technology": "jsDelivr",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "//cdn\\.jsdelivr\\.net/"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "sahibiniden.siparis-olustur-223035.com/odeme?id=HIHrD-Playstation-5-1-TB",
+    "scan_url": "https://urlscan.io/result/3521c9f8-2163-434a-88f3-c558bc330d89/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T17:14:57.890131",
+      "scan_url": "https://urlscan.io/result/3521c9f8-2163-434a-88f3-c558bc330d89/",
+      "targeted_brands": [
+        {
+          "name": "Sahibinden",
+          "category": "Classifieds"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "SweetAlert2",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/npm/sweetalert2@([\\d.]+)"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        },
+        {
+          "technology": "jsDelivr",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "//cdn\\.jsdelivr\\.net/"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "sahibiniden.siparis-olustur-223035.com/ilan?id=uD0lv-Logitech-G29-Direksiyon-Se...",
+    "scan_url": "https://urlscan.io/result/1837a90e-cc5b-431c-b950-aa615fb2f059/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T17:44:06.594894",
+      "scan_url": "https://urlscan.io/result/1837a90e-cc5b-431c-b950-aa615fb2f059/",
+      "targeted_brands": [
+        {
+          "name": "Sahibinden",
+          "category": "Classifieds"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Axios",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/axios(@|/)([\\d.]+)(?:/[a-z]+)?/axios(?:.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "Google AdSense",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "googlesyndication\\.com/"
+          ]
+        },
+        {
+          "technology": "SweetAlert2",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/npm/sweetalert2@([\\d.]+)"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        },
+        {
+          "technology": "jsDelivr",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "//cdn\\.jsdelivr\\.net/"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "29182628282722762.com.tr/",
+    "scan_url": "https://urlscan.io/result/0b6a2d68-5668-4b2b-8a35-b9e15734d6fa/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T18:21:57.564108",
+      "scan_url": "https://urlscan.io/result/0b6a2d68-5668-4b2b-8a35-b9e15734d6fa/",
+      "targeted_brands": [
+        {
+          "name": "Generic Cloudflare",
+          "category": "Online"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "www.grisportpolska.com/",
+    "scan_url": "https://urlscan.io/result/6dccdf84-f81f-452b-aeb5-82bb00d0312b/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T18:42:09.636195",
+      "scan_url": "https://urlscan.io/result/6dccdf84-f81f-452b-aeb5-82bb00d0312b/",
+      "targeted_brands": [
+        {
+          "name": "Fake Shop",
+          "category": "Fashion"
+        }
+      ],
+      "location": "GB",
+      "asn_org": "AS41564 Orion Network Limited, GB",
+      "detected_technologies": [
+        {
+          "technology": "Google Font API",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+fonts\\.(?:googleapis|google)\\.com"
+          ]
+        },
+        {
+          "technology": "Lightbox",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link [^>]*href=\"[^\"]+lightbox(?:\\.min)?\\.css",
+            "lightbox(?:-plus-jquery)?.{0,32}\\.js"
+          ]
+        },
+        {
+          "technology": "Slick",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "(?:/([\\d.]+))?/slick(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "teleqrezm.cn/",
+    "scan_url": "https://urlscan.io/result/5bc4af93-79d5-46bb-a8a4-3d0bf670d44e/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T18:46:43.375855",
+      "scan_url": "https://urlscan.io/result/5bc4af93-79d5-46bb-a8a4-3d0bf670d44e/",
+      "targeted_brands": [
+        {
+          "name": "Telegram",
+          "category": "Instant Messenger"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Bootstrap",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "Google Font API",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+fonts\\.(?:googleapis|google)\\.com"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "teleigcmen.cn/",
+    "scan_url": "https://urlscan.io/result/22ba9a54-cc95-4b21-a891-b35e7ecb6ceb/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T19:01:30.415740",
+      "scan_url": "https://urlscan.io/result/22ba9a54-cc95-4b21-a891-b35e7ecb6ceb/",
+      "targeted_brands": [
+        {
+          "name": "Telegram",
+          "category": "Instant Messenger"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Bootstrap",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "Google Font API",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+fonts\\.(?:googleapis|google)\\.com"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "www.telegramna.com/",
+    "scan_url": "https://urlscan.io/result/0e6e28c3-3762-479e-b21b-577c69713a00/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T19:03:41.803202",
+      "scan_url": "https://urlscan.io/result/0e6e28c3-3762-479e-b21b-577c69713a00/",
+      "targeted_brands": [
+        {
+          "name": "Telegram",
+          "category": "Instant Messenger"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "WordPress",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link rel=[\"']stylesheet[\"'] [^>]+/wp-(?:content|includes)/",
+            "/wp-(?:content|includes)/"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "5912789.cc/",
+    "scan_url": "https://urlscan.io/result/e9395350-ad89-4306-87d9-86630cd9f295/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T19:23:50.830049",
+      "scan_url": "https://urlscan.io/result/e9395350-ad89-4306-87d9-86630cd9f295/",
+      "targeted_brands": [],
+      "location": "HK",
+      "asn_org": "ASLINE-AS-AP ASLINE LIMITED, HK",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "7878131.cc/",
+    "scan_url": "https://urlscan.io/result/7ef7c9b0-9ae5-4ad7-bd68-a7cf92bc3835/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T19:34:12.954049",
+      "scan_url": "https://urlscan.io/result/7ef7c9b0-9ae5-4ad7-bd68-a7cf92bc3835/",
+      "targeted_brands": [],
+      "location": "HK",
+      "asn_org": "CLOUDIE-AS-AP Cloudie Limited, HK",
+      "detected_technologies": [
+        {
+          "technology": "animate.css",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link [^>]+(?:/([\\d.]+)/)?animate\\.(?:min\\.)?css"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "5912803.cc/",
+    "scan_url": "https://urlscan.io/result/b6e43387-f821-4c00-887b-a117d6c8007c/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T19:35:28.976421",
+      "scan_url": "https://urlscan.io/result/b6e43387-f821-4c00-887b-a117d6c8007c/",
+      "targeted_brands": [],
+      "location": "HK",
+      "asn_org": "ASLINE-AS-AP ASLINE LIMITED, HK",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "sahibiniden.siparis-olustur-223035.com/odeme?id=qTuMG-PS4-1TB-Garantisi-Var",
+    "scan_url": "https://urlscan.io/result/a8a4ecd8-75cd-4a4f-a000-a1bcecf098f2/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T19:35:43.812454",
+      "scan_url": "https://urlscan.io/result/a8a4ecd8-75cd-4a4f-a000-a1bcecf098f2/",
+      "targeted_brands": [
+        {
+          "name": "Sahibinden",
+          "category": "Classifieds"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "SweetAlert2",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/npm/sweetalert2@([\\d.]+)"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        },
+        {
+          "technology": "jsDelivr",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "//cdn\\.jsdelivr\\.net/"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "jpxvn.net/Trade/index?type=buy&symbol=DYDX",
+    "scan_url": "https://urlscan.io/result/147d2da4-3b80-4c6f-879c-04b750795b90/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T19:36:40.165679",
+      "scan_url": "https://urlscan.io/result/147d2da4-3b80-4c6f-879c-04b750795b90/",
+      "targeted_brands": [
+        {
+          "name": "Generic Crypto",
+          "category": "Crypto Exchange"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Bootstrap",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]*?bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.css",
+            "bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "/([\\d.]+)/jquery(?:\\.min)?\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        },
+        {
+          "technology": "jsDelivr",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link [^>]*?href=\"?[a-zA-Z]*?:?//cdn\\.jsdelivr\\.net/",
+            "//cdn\\.jsdelivr\\.net/"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "whaysci.top/",
+    "scan_url": "https://urlscan.io/result/d186f9fe-37c7-4aee-9e6f-7a1ba1124053/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T19:39:56.111913",
+      "scan_url": "https://urlscan.io/result/d186f9fe-37c7-4aee-9e6f-7a1ba1124053/",
+      "targeted_brands": [],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "telegrams-to.org/dist/",
+    "scan_url": "https://urlscan.io/result/505e1c8d-4ebb-4a64-97e9-ece6f8230fb5/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T19:51:32.897785",
+      "scan_url": "https://urlscan.io/result/505e1c8d-4ebb-4a64-97e9-ece6f8230fb5/",
+      "targeted_brands": [
+        {
+          "name": "Telegram",
+          "category": "Instant Messenger"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "telegrams-tu.org/dist/",
+    "scan_url": "https://urlscan.io/result/4c89724a-f153-4ecb-a7c4-d541c41a3f42/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T19:53:02.488069",
+      "scan_url": "https://urlscan.io/result/4c89724a-f153-4ecb-a7c4-d541c41a3f42/",
+      "targeted_brands": [
+        {
+          "name": "Telegram",
+          "category": "Instant Messenger"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "telemgram-rc.org/dist/",
+    "scan_url": "https://urlscan.io/result/0434e867-017d-4c79-994d-17ebf4290821/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T19:59:56.772947",
+      "scan_url": "https://urlscan.io/result/0434e867-017d-4c79-994d-17ebf4290821/",
+      "targeted_brands": [
+        {
+          "name": "Telegram",
+          "category": "Instant Messenger"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "telemgram-re.org/dist/",
+    "scan_url": "https://urlscan.io/result/1916bf2e-e136-4edd-847c-0793a2370d41/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T20:00:22.503835",
+      "scan_url": "https://urlscan.io/result/1916bf2e-e136-4edd-847c-0793a2370d41/",
+      "targeted_brands": [
+        {
+          "name": "Telegram",
+          "category": "Instant Messenger"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "telemgram-ra.org/dist/",
+    "scan_url": "https://urlscan.io/result/2ef6ef61-16eb-4c84-bbe1-863ce5b086bd/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T20:01:16.946387",
+      "scan_url": "https://urlscan.io/result/2ef6ef61-16eb-4c84-bbe1-863ce5b086bd/",
+      "targeted_brands": [
+        {
+          "name": "Telegram",
+          "category": "Instant Messenger"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "telegcpqm.cn/",
+    "scan_url": "https://urlscan.io/result/f1b8f24d-8bb1-4427-997b-25428103d6b0/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T20:26:13.889857",
+      "scan_url": "https://urlscan.io/result/f1b8f24d-8bb1-4427-997b-25428103d6b0/",
+      "targeted_brands": [
+        {
+          "name": "Telegram",
+          "category": "Instant Messenger"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Bootstrap",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "Google Font API",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+fonts\\.(?:googleapis|google)\\.com"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "telezgrma.cn/",
+    "scan_url": "https://urlscan.io/result/438d9bbe-a4c6-41ce-bcce-ee3d4d1c3d5c/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T20:28:57.960134",
+      "scan_url": "https://urlscan.io/result/438d9bbe-a4c6-41ce-bcce-ee3d4d1c3d5c/",
+      "targeted_brands": [
+        {
+          "name": "Telegram",
+          "category": "Instant Messenger"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Bootstrap",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "Google Font API",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+fonts\\.(?:googleapis|google)\\.com"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "telergzme.cn/",
+    "scan_url": "https://urlscan.io/result/8fdc02de-4980-44a3-bb55-5aeedcc5db9e/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T20:29:20.652909",
+      "scan_url": "https://urlscan.io/result/8fdc02de-4980-44a3-bb55-5aeedcc5db9e/",
+      "targeted_brands": [
+        {
+          "name": "Telegram",
+          "category": "Instant Messenger"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "televpqm.cn/",
+    "scan_url": "https://urlscan.io/result/ced02fe5-711b-45e1-a959-5dd02f7f0ab7/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T21:23:12.994559",
+      "scan_url": "https://urlscan.io/result/ced02fe5-711b-45e1-a959-5dd02f7f0ab7/",
+      "targeted_brands": [
+        {
+          "name": "Telegram",
+          "category": "Instant Messenger"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Bootstrap",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "Google Font API",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+fonts\\.(?:googleapis|google)\\.com"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "vodafonebusinessnk.de/",
+    "scan_url": "https://urlscan.io/result/96128992-6bc8-4408-960d-6f410e875892/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T21:28:59.356746",
+      "scan_url": "https://urlscan.io/result/96128992-6bc8-4408-960d-6f410e875892/",
+      "targeted_brands": [],
+      "location": "DE",
+      "asn_org": "IONOS-AS IONOS SE, DE",
+      "detected_technologies": [
+        {
+          "technology": "WordPress",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link rel=[\"']stylesheet[\"'] [^>]+/wp-(?:content|includes)/",
+            "/wp-(?:content|includes)/"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "ke5pabq.easy-lovezone.com/vg32684?t=983",
+    "scan_url": "https://urlscan.io/result/71e703ac-0de1-44e3-948d-fe9bcf59b7f7/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T21:30:13.057226",
+      "scan_url": "https://urlscan.io/result/71e703ac-0de1-44e3-948d-fe9bcf59b7f7/",
+      "targeted_brands": [
+        {
+          "name": "Generic Scam",
+          "category": "Online"
+        }
+      ],
+      "location": "CH",
+      "asn_org": "AS-6898 AS5398 SA, CH",
+      "detected_technologies": [
+        {
+          "technology": "animate.css",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link [^>]+(?:/([\\d.]+)/)?animate\\.(?:min\\.)?css"
+          ]
+        },
+        {
+          "technology": "Matomo Analytics",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "piwik\\.js|piwik\\.php"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "1b39f8e40a.dfdfafd.top/",
+    "scan_url": "https://urlscan.io/result/b79ffc08-38ba-4ee3-8e7c-160f975d0617/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T22:05:56.344080",
+      "scan_url": "https://urlscan.io/result/b79ffc08-38ba-4ee3-8e7c-160f975d0617/",
+      "targeted_brands": [],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "particles.js",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/particles(?:\\.min)?\\.js"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "mongolpost.mn-check.lol/MN/",
+    "scan_url": "https://urlscan.io/result/fe98f06e-9e5e-4a53-a17f-b48465fba367/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T22:11:10.811019",
+      "scan_url": "https://urlscan.io/result/fe98f06e-9e5e-4a53-a17f-b48465fba367/",
+      "targeted_brands": [],
+      "location": "CN",
+      "asn_org": "TENCENT-NET-AP-CN Tencent Building, Kejizhongyi Avenue, CN",
+      "detected_technologies": [
+        {
+          "technology": "Cart Functionality",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<a[^>]*href=[^>]*/Cart"
+          ]
+        },
+        {
+          "technology": "Socket.io",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "socket\\.io.*\\.js"
+          ]
+        },
+        {
+          "technology": "Vue.js",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<[^>]+\\sdata-v(?:ue)?-"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "teleeggram.cyou/",
+    "scan_url": "https://urlscan.io/result/c7f92eb7-85fc-4c4f-bb2f-8ae9a4bdf47f/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T22:17:53.790715",
+      "scan_url": "https://urlscan.io/result/c7f92eb7-85fc-4c4f-bb2f-8ae9a4bdf47f/",
+      "targeted_brands": [
+        {
+          "name": "Telegram",
+          "category": "Instant Messenger"
+        }
+      ],
+      "location": "HK",
+      "asn_org": "ANTBOX1-AS-AP Antbox Networks Limited, HK",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "tatagram.top/",
+    "scan_url": "https://urlscan.io/result/f4b511ba-c388-4784-b447-ff0f166cef70/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T22:49:05.384255",
+      "scan_url": "https://urlscan.io/result/f4b511ba-c388-4784-b447-ff0f166cef70/",
+      "targeted_brands": [],
+      "location": null,
+      "asn_org": "ALIBABA-CN-NET Alibaba US Technology Co",
+      "detected_technologies": [
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "zhongwen-telegram.com/",
+    "scan_url": "https://urlscan.io/result/71482692-2f81-46d0-bdd0-08a34fa62ed4/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T22:54:22.699731",
+      "scan_url": "https://urlscan.io/result/71482692-2f81-46d0-bdd0-08a34fa62ed4/",
+      "targeted_brands": [
+        {
+          "name": "Telegram",
+          "category": "Instant Messenger"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "telegrarn.vip/",
+    "scan_url": "https://urlscan.io/result/1683039a-136a-4a55-8d4b-e8229a2f277a/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T22:56:25.662440",
+      "scan_url": "https://urlscan.io/result/1683039a-136a-4a55-8d4b-e8229a2f277a/",
+      "targeted_brands": [
+        {
+          "name": "Telegram",
+          "category": "Instant Messenger"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "WordPress",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link rel=[\"']stylesheet[\"'] [^>]+/wp-(?:content|includes)/",
+            "/wp-(?:content|includes)/"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "mutufgfoplr.website/",
+    "scan_url": "https://urlscan.io/result/e4afa5cd-8379-4dd4-a242-441d47f3d6dc/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T22:57:17.683761",
+      "scan_url": "https://urlscan.io/result/e4afa5cd-8379-4dd4-a242-441d47f3d6dc/",
+      "targeted_brands": [
+        {
+          "name": "Telegram",
+          "category": "Instant Messenger"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "jpxvn.net/Trade/index?type=buy&symbol=VET",
+    "scan_url": "https://urlscan.io/result/4b05e70f-ab91-4a5a-aa73-4b181b247e51/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-14T23:13:05.959950",
+      "scan_url": "https://urlscan.io/result/4b05e70f-ab91-4a5a-aa73-4b181b247e51/",
+      "targeted_brands": [
+        {
+          "name": "Generic Crypto",
+          "category": "Crypto Exchange"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Bootstrap",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]*?bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.css",
+            "bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "/([\\d.]+)/jquery(?:\\.min)?\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        },
+        {
+          "technology": "jsDelivr",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link [^>]*?href=\"?[a-zA-Z]*?:?//cdn\\.jsdelivr\\.net/",
+            "//cdn\\.jsdelivr\\.net/"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "11tbet3k.top/?dl=$eix4zh$IDR$2",
+    "scan_url": "https://urlscan.io/result/bd4a6ed2-6860-4f3f-8427-87ad837657ce/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T05:03:39.615108",
+      "scan_url": "https://urlscan.io/result/bd4a6ed2-6860-4f3f-8427-87ad837657ce/",
+      "targeted_brands": [
+        {
+          "name": "Generic Cloudflare",
+          "category": "Online"
+        }
+      ],
+      "location": "US",
+      "asn_org": "AMAZON-02, US",
+      "detected_technologies": [
+        {
+          "technology": "Lodash",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "lodash.*\\.js"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "ipfs.io/ipfs/Qmf4SigcvP2qyqpfSd5vHJvqN1UnDQKTkoybvNwzp7LHQp",
+    "scan_url": "https://urlscan.io/result/d6e95034-6882-42ef-a61c-d3f84a49e369/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T05:10:07.542789",
+      "scan_url": "https://urlscan.io/result/d6e95034-6882-42ef-a61c-d3f84a49e369/",
+      "targeted_brands": [
+        {
+          "name": "Adobe",
+          "category": "Consumer"
+        },
+        {
+          "name": "Generic Email",
+          "category": "Online"
+        }
+      ],
+      "location": "US",
+      "asn_org": "PROTOCOL, US",
+      "detected_technologies": [
+        {
+          "technology": "Bootstrap",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]*?bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.css",
+            "bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "Font Awesome",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+(?:([\\d.]+)/)?(?:css/)?font-awesome(?:\\.min)?\\.css",
+            "<link[^>]* href=[^>]*?(?:F|f)o(?:n|r)t-?(?:A|a)wesome(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)",
+            "(?:F|f)o(?:n|r)t-?(?:A|a)wesome(?:.*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)"
+          ]
+        },
+        {
+          "technology": "Popper",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<script [^>]*src=\"[^\"]*/popper\\.js/([0-9.]+)",
+            "/popper\\.js/([0-9.]+)"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "mshalom27.github.io/Amazon-Clone/",
+    "scan_url": "https://urlscan.io/result/3a70c81a-d1d5-435f-a90d-aa10ccfe8219/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T05:20:46.410032",
+      "scan_url": "https://urlscan.io/result/3a70c81a-d1d5-435f-a90d-aa10ccfe8219/",
+      "targeted_brands": [
+        {
+          "name": "Amazon",
+          "category": "Online"
+        }
+      ],
+      "location": "US",
+      "asn_org": "FASTLY, US",
+      "detected_technologies": [
+        {
+          "technology": "Font Awesome",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]*?(?:F|f)o(?:n|r)t-?(?:A|a)wesome(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)",
+            "(?:F|f)o(?:n|r)t-?(?:A|a)wesome(?:.*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)"
+          ]
+        },
+        {
+          "technology": "GitHub Pages",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "^https?://[^/]+\\.github\\.io"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "update-account-authenticator-information-required.47-90-152-31.cprapid.com/secu...",
+    "scan_url": "https://urlscan.io/result/4566bb24-e8fd-45f5-bd69-68200ff7dabd/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T05:22:01.617591",
+      "scan_url": "https://urlscan.io/result/4566bb24-e8fd-45f5-bd69-68200ff7dabd/",
+      "targeted_brands": [
+        {
+          "name": "Coinbase",
+          "category": "Crypto Exchange"
+        }
+      ],
+      "location": null,
+      "asn_org": "ALIBABA-CN-NET Alibaba US Technology Co",
+      "detected_technologies": [
+        {
+          "technology": "RequireJS",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "require.*\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "frostk.vercel.app/",
+    "scan_url": "https://urlscan.io/result/d67d2973-8a87-41ba-817a-caebd91aa230/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T05:23:20.185047",
+      "scan_url": "https://urlscan.io/result/d67d2973-8a87-41ba-817a-caebd91aa230/",
+      "targeted_brands": [],
+      "location": "US",
+      "asn_org": "AMAZON-02, US",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "omvrat96.github.io/NetflixClone.Project/",
+    "scan_url": "https://urlscan.io/result/3287a676-f07b-4908-a6f8-527dd3a23016/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T05:31:03.396574",
+      "scan_url": "https://urlscan.io/result/3287a676-f07b-4908-a6f8-527dd3a23016/",
+      "targeted_brands": [
+        {
+          "name": "Netflix",
+          "category": "Online"
+        }
+      ],
+      "location": "US",
+      "asn_org": "FASTLY, US",
+      "detected_technologies": [
+        {
+          "technology": "GitHub Pages",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "^https?://[^/]+\\.github\\.io"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "abysabys.github.io/Qwqwqw/",
+    "scan_url": "https://urlscan.io/result/1e553fd9-47d1-4f0a-b35d-7fa4c23a7594/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T05:39:47.728826",
+      "scan_url": "https://urlscan.io/result/1e553fd9-47d1-4f0a-b35d-7fa4c23a7594/",
+      "targeted_brands": [
+        {
+          "name": "Instagram",
+          "category": "Social Network"
+        }
+      ],
+      "location": "US",
+      "asn_org": "FASTLY, US",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "welcome-live-trezzor.github.io/",
+    "scan_url": "https://urlscan.io/result/7acfd8b6-24c2-44a4-943e-c5213a07ee4d/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T05:44:02.067094",
+      "scan_url": "https://urlscan.io/result/7acfd8b6-24c2-44a4-943e-c5213a07ee4d/",
+      "targeted_brands": [
+        {
+          "name": "Trezor",
+          "category": "Crypto"
+        }
+      ],
+      "location": "US",
+      "asn_org": "FASTLY, US",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "trouguveyeffe-1425.vercel.app/ratixx.html/",
+    "scan_url": "https://urlscan.io/result/deb74d37-3366-45c9-9406-9df1c2b61d69/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T05:46:12.451382",
+      "scan_url": "https://urlscan.io/result/deb74d37-3366-45c9-9406-9df1c2b61d69/",
+      "targeted_brands": [
+        {
+          "name": "Facebook",
+          "category": "Social Network"
+        }
+      ],
+      "location": "US",
+      "asn_org": "AMAZON-02, US",
+      "detected_technologies": [
+        {
+          "technology": "Bootstrap",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]*?bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.css",
+            "bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/([\\d.]+)/jquery(?:\\.min)?\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "23.231.160.88/?code=kshge4_188",
+    "scan_url": "https://urlscan.io/result/7d1f172b-c1fa-4a1a-9bbd-3d64abe4f6e1/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T05:46:41.469151",
+      "scan_url": "https://urlscan.io/result/7d1f172b-c1fa-4a1a-9bbd-3d64abe4f6e1/",
+      "targeted_brands": [
+        {
+          "name": "Generic Scam",
+          "category": "Online"
+        }
+      ],
+      "location": "HK",
+      "asn_org": "POWERLINE-AS-AP POWER LINE DATACENTER, HK",
+      "detected_technologies": [
+        {
+          "technology": "animate.css",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link [^>]+(?:/([\\d.]+)/)?animate\\.(?:min\\.)?css"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "google-accounts.certifiedsafepages.net/landing/form/02ce374f-5966-4916-be5c-83f...",
+    "scan_url": "https://urlscan.io/result/1dc1959f-d364-477b-9daa-436f826e80c8/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T05:51:14.356823",
+      "scan_url": "https://urlscan.io/result/1dc1959f-d364-477b-9daa-436f826e80c8/",
+      "targeted_brands": [
+        {
+          "name": "Google",
+          "category": "Online"
+        }
+      ],
+      "location": "US",
+      "asn_org": "AMAZON-02, US",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "jaffeusacanna-9646.vercel.app/ratixx.html/",
+    "scan_url": "https://urlscan.io/result/42f58470-d3d7-458c-9933-debc98ed8a7b/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T05:51:57.955946",
+      "scan_url": "https://urlscan.io/result/42f58470-d3d7-458c-9933-debc98ed8a7b/",
+      "targeted_brands": [
+        {
+          "name": "Facebook",
+          "category": "Social Network"
+        }
+      ],
+      "location": "US",
+      "asn_org": "AMAZON-02, US",
+      "detected_technologies": [
+        {
+          "technology": "Bootstrap",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]*?bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.css",
+            "bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/([\\d.]+)/jquery(?:\\.min)?\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "santander-project.vercel.app/",
+    "scan_url": "https://urlscan.io/result/0bcd3f42-c63e-4465-a602-206c85a62eaa/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T05:52:22.526307",
+      "scan_url": "https://urlscan.io/result/0bcd3f42-c63e-4465-a602-206c85a62eaa/",
+      "targeted_brands": [],
+      "location": "US",
+      "asn_org": "AMAZON-02, US",
+      "detected_technologies": [
+        {
+          "technology": "Google Font API",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+fonts\\.(?:googleapis|google)\\.com"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "scenamconmynlty.com/utysr/filok/minot",
+    "scan_url": "https://urlscan.io/result/1c17609c-b403-44d1-93ab-078ceeb81af7/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T06:19:03.913015",
+      "scan_url": "https://urlscan.io/result/1c17609c-b403-44d1-93ab-078ceeb81af7/",
+      "targeted_brands": [
+        {
+          "name": "Steam",
+          "category": "Gaming"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Prototype",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "(?:prototype|protoaculous)(?:-([\\d.]*[\\d]))?.*\\.js"
+          ]
+        },
+        {
+          "technology": "Slick",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "(?:/([\\d.]+))?/slick(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "/([\\d.]+)/jquery(?:\\.min)?\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        },
+        {
+          "technology": "jQuery UI",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "([\\d.]+)/jquery-ui(?:\\.min)?\\.js",
+            "jquery-ui.*\\.js"
+          ]
+        },
+        {
+          "technology": "script.aculo.us",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/(?:scriptaculous|protoaculous)(?:\\.js|/)"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "sreamconmymnltty.com/forte/ciutre/giohu",
+    "scan_url": "https://urlscan.io/result/4a086492-0830-4e2a-8842-02e00014065c/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T06:27:05.742959",
+      "scan_url": "https://urlscan.io/result/4a086492-0830-4e2a-8842-02e00014065c/",
+      "targeted_brands": [
+        {
+          "name": "Steam",
+          "category": "Gaming"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Prototype",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "(?:prototype|protoaculous)(?:-([\\d.]*[\\d]))?.*\\.js"
+          ]
+        },
+        {
+          "technology": "Slick",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "(?:/([\\d.]+))?/slick(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "/([\\d.]+)/jquery(?:\\.min)?\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        },
+        {
+          "technology": "jQuery UI",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "([\\d.]+)/jquery-ui(?:\\.min)?\\.js",
+            "jquery-ui.*\\.js"
+          ]
+        },
+        {
+          "technology": "script.aculo.us",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/(?:scriptaculous|protoaculous)(?:\\.js|/)"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "ckwwxtsorb.cfolks.pl/",
+    "scan_url": "https://urlscan.io/result/326babfb-d1cb-45f3-9518-436f9bf3194f/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T06:29:14.823153",
+      "scan_url": "https://urlscan.io/result/326babfb-d1cb-45f3-9518-436f9bf3194f/",
+      "targeted_brands": [
+        {
+          "name": "DHL",
+          "category": "Transportation"
+        }
+      ],
+      "location": null,
+      "asn_org": "CF-GDA Cyber_Folks S",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "scenamconmynlty.com/mutnre/codi/fior",
+    "scan_url": "https://urlscan.io/result/8c81ed86-60bc-4642-b086-e53f0b282d52/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T06:35:08.791146",
+      "scan_url": "https://urlscan.io/result/8c81ed86-60bc-4642-b086-e53f0b282d52/",
+      "targeted_brands": [
+        {
+          "name": "Steam",
+          "category": "Gaming"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Prototype",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "(?:prototype|protoaculous)(?:-([\\d.]*[\\d]))?.*\\.js"
+          ]
+        },
+        {
+          "technology": "Slick",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "(?:/([\\d.]+))?/slick(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "/([\\d.]+)/jquery(?:\\.min)?\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        },
+        {
+          "technology": "jQuery UI",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "([\\d.]+)/jquery-ui(?:\\.min)?\\.js",
+            "jquery-ui.*\\.js"
+          ]
+        },
+        {
+          "technology": "script.aculo.us",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/(?:scriptaculous|protoaculous)(?:\\.js|/)"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "staemcommunnutly.com/gift/activation=Dor5Fhnm5w",
+    "scan_url": "https://urlscan.io/result/22cf0048-a497-483e-a421-c94ea6f8d5ab/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T06:43:39.303122",
+      "scan_url": "https://urlscan.io/result/22cf0048-a497-483e-a421-c94ea6f8d5ab/",
+      "targeted_brands": [
+        {
+          "name": "Steam",
+          "category": "Gaming"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Prototype",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "(?:prototype|protoaculous)(?:-([\\d.]*[\\d]))?.*\\.js"
+          ]
+        },
+        {
+          "technology": "Slick",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "(?:/([\\d.]+))?/slick(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "/([\\d.]+)/jquery(?:\\.min)?\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        },
+        {
+          "technology": "jQuery UI",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "([\\d.]+)/jquery-ui(?:\\.min)?\\.js",
+            "jquery-ui.*\\.js"
+          ]
+        },
+        {
+          "technology": "script.aculo.us",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/(?:scriptaculous|protoaculous)(?:\\.js|/)"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "ezdrivema.com-ioiakva.top/I/",
+    "scan_url": "https://urlscan.io/result/8f186235-c55b-417b-a32a-75d238cb8cfa/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T06:43:45.962443",
+      "scan_url": "https://urlscan.io/result/8f186235-c55b-417b-a32a-75d238cb8cfa/",
+      "targeted_brands": [],
+      "location": "CN",
+      "asn_org": "TENCENT-NET-AP-CN Tencent Building, Kejizhongyi Avenue, CN",
+      "detected_technologies": [
+        {
+          "technology": "Socket.io",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "socket\\.io.*\\.js"
+          ]
+        },
+        {
+          "technology": "Vue.js",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<[^>]+\\sdata-v(?:ue)?-"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "ezdrivema.com-ioiakvz.top/I/",
+    "scan_url": "https://urlscan.io/result/a45a0b3b-2303-4474-b57e-a00ec51fff24/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T06:44:34.587309",
+      "scan_url": "https://urlscan.io/result/a45a0b3b-2303-4474-b57e-a00ec51fff24/",
+      "targeted_brands": [],
+      "location": "CN",
+      "asn_org": "TENCENT-NET-AP-CN Tencent Building, Kejizhongyi Avenue, CN",
+      "detected_technologies": [
+        {
+          "technology": "Socket.io",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "socket\\.io.*\\.js"
+          ]
+        },
+        {
+          "technology": "Vue.js",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<[^>]+\\sdata-v(?:ue)?-"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "pn2-kappa.vercel.app/intest.html",
+    "scan_url": "https://urlscan.io/result/45989824-74c7-4526-b795-cf632ec4c712/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T06:44:42.473722",
+      "scan_url": "https://urlscan.io/result/45989824-74c7-4526-b795-cf632ec4c712/",
+      "targeted_brands": [
+        {
+          "name": "Facebook",
+          "category": "Social Network"
+        }
+      ],
+      "location": "US",
+      "asn_org": "AMAZON-02, US",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "ezdrivema.com-ioiakve.top/I/",
+    "scan_url": "https://urlscan.io/result/8adae399-d64d-4c8d-9e4e-47e27d3d0603/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T06:48:07.070681",
+      "scan_url": "https://urlscan.io/result/8adae399-d64d-4c8d-9e4e-47e27d3d0603/",
+      "targeted_brands": [],
+      "location": "CN",
+      "asn_org": "TENCENT-NET-AP-CN Tencent Building, Kejizhongyi Avenue, CN",
+      "detected_technologies": [
+        {
+          "technology": "Socket.io",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "socket\\.io.*\\.js"
+          ]
+        },
+        {
+          "technology": "Vue.js",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<[^>]+\\sdata-v(?:ue)?-"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "emaiiaii.weebly.com/",
+    "scan_url": "https://urlscan.io/result/249ce3aa-31bd-464c-b694-0e695eaebf64/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T06:53:22.872729",
+      "scan_url": "https://urlscan.io/result/249ce3aa-31bd-464c-b694-0e695eaebf64/",
+      "targeted_brands": [],
+      "location": "US",
+      "asn_org": "WEEBLY, US",
+      "detected_technologies": [
+        {
+          "technology": "Weebly",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "cdn\\d+\\.editmysite\\.com"
+          ]
+        },
+        {
+          "technology": "Google Analytics",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "google-analytics\\.com/(?:ga|urchin|analytics)\\.js"
+          ]
+        },
+        {
+          "technology": "Google Font API",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+fonts\\.(?:googleapis|google)\\.com"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        },
+        {
+          "technology": "reCAPTCHA",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/recaptcha/api\\.js"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "ezdrivema.com-ioiakvr.top/I/",
+    "scan_url": "https://urlscan.io/result/848469ca-6ded-4dbe-988f-ee8138ce10c9/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T06:54:28.036226",
+      "scan_url": "https://urlscan.io/result/848469ca-6ded-4dbe-988f-ee8138ce10c9/",
+      "targeted_brands": [],
+      "location": "CN",
+      "asn_org": "TENCENT-NET-AP-CN Tencent Building, Kejizhongyi Avenue, CN",
+      "detected_technologies": [
+        {
+          "technology": "Socket.io",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "socket\\.io.*\\.js"
+          ]
+        },
+        {
+          "technology": "Vue.js",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<[^>]+\\sdata-v(?:ue)?-"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "ppt.cc/fQn1nx",
+    "scan_url": "https://urlscan.io/result/b1e31845-3fe8-4de2-96d4-af29a6d00f40/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T06:55:15.460059",
+      "scan_url": "https://urlscan.io/result/b1e31845-3fe8-4de2-96d4-af29a6d00f40/",
+      "targeted_brands": [],
+      "location": "TW",
+      "asn_org": "HINET Data Communication Business Group, TW",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "ezdrivema.com-ioiakiq.top/I/",
+    "scan_url": "https://urlscan.io/result/62b3ea3c-b1f3-4b87-9a08-f94bed60e126/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T06:57:58.952631",
+      "scan_url": "https://urlscan.io/result/62b3ea3c-b1f3-4b87-9a08-f94bed60e126/",
+      "targeted_brands": [],
+      "location": "CN",
+      "asn_org": "TENCENT-NET-AP-CN Tencent Building, Kejizhongyi Avenue, CN",
+      "detected_technologies": [
+        {
+          "technology": "Socket.io",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "socket\\.io.*\\.js"
+          ]
+        },
+        {
+          "technology": "Vue.js",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<[^>]+\\sdata-v(?:ue)?-"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "robbrown00.osago09.ru/",
+    "scan_url": "https://urlscan.io/result/de77939c-908b-4a15-90dc-9b727e88e75b/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T07:03:21.776070",
+      "scan_url": "https://urlscan.io/result/de77939c-908b-4a15-90dc-9b727e88e75b/",
+      "targeted_brands": [],
+      "location": null,
+      "asn_org": "AS-REGRU \"Domain names registrar REG",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "ezdrivema.com-ioiakie.top/I/",
+    "scan_url": "https://urlscan.io/result/2d0a281f-1981-45c9-99b3-8ee77a6cd831/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T07:04:16.718365",
+      "scan_url": "https://urlscan.io/result/2d0a281f-1981-45c9-99b3-8ee77a6cd831/",
+      "targeted_brands": [],
+      "location": "CN",
+      "asn_org": "TENCENT-NET-AP-CN Tencent Building, Kejizhongyi Avenue, CN",
+      "detected_technologies": [
+        {
+          "technology": "Socket.io",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "socket\\.io.*\\.js"
+          ]
+        },
+        {
+          "technology": "Vue.js",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<[^>]+\\sdata-v(?:ue)?-"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "cb-notification.top/newtransfer",
+    "scan_url": "https://urlscan.io/result/c5d31811-a4e7-44c4-a0b9-dde7f2cfb4bc/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T07:14:31.660073",
+      "scan_url": "https://urlscan.io/result/c5d31811-a4e7-44c4-a0b9-dde7f2cfb4bc/",
+      "targeted_brands": [
+        {
+          "name": "Coinbase",
+          "category": "Crypto Exchange"
+        }
+      ],
+      "location": "RU",
+      "asn_org": "proton66 Proton66 OOO, RU",
+      "detected_technologies": [
+        {
+          "technology": "Bootstrap",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]*?bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.css",
+            "bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "Google Font API",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+fonts\\.(?:googleapis|google)\\.com"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "alertsnotification.com/landing/form/7b84fc89-180e-409d-9b69-b28fb9a1ce3f",
+    "scan_url": "https://urlscan.io/result/8d0c34a5-ef04-4fd8-b211-47ff9fad69eb/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T07:15:24.371203",
+      "scan_url": "https://urlscan.io/result/8d0c34a5-ef04-4fd8-b211-47ff9fad69eb/",
+      "targeted_brands": [
+        {
+          "name": "Microsoft",
+          "category": "Consumer"
+        }
+      ],
+      "location": "US",
+      "asn_org": "AMAZON-AES, US",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "rohtaswildlife.in/gtbnarvralguat/user.html",
+    "scan_url": "https://urlscan.io/result/b15ee131-7166-4827-8eed-4c248988b1f1/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T07:22:11.353764",
+      "scan_url": "https://urlscan.io/result/b15ee131-7166-4827-8eed-4c248988b1f1/",
+      "targeted_brands": [
+        {
+          "name": "Banrural",
+          "category": "Banking"
+        }
+      ],
+      "location": "US",
+      "asn_org": "UNIFIEDLAYER-AS-1, US",
+      "detected_technologies": [
+        {
+          "technology": "Bootstrap",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]*?bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.css",
+            "bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "Axios",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/axios(@|/)([\\d.]+)(?:/[a-z]+)?/axios(?:.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "Google Font API",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+fonts\\.(?:googleapis|google)\\.com"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        },
+        {
+          "technology": "jsDelivr",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link [^>]*?href=\"?[a-zA-Z]*?:?//cdn\\.jsdelivr\\.net/",
+            "//cdn\\.jsdelivr\\.net/"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "api.saisoncard.co.jp/auth/screen/atu/authorize?authority=&scope=openid&response...",
+    "scan_url": "https://urlscan.io/result/ac1aeb14-f16b-447d-ad24-20c7f884cc4c/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T07:27:25.803092",
+      "scan_url": "https://urlscan.io/result/ac1aeb14-f16b-447d-ad24-20c7f884cc4c/",
+      "targeted_brands": [
+        {
+          "name": "UC Card",
+          "category": "Financial"
+        }
+      ],
+      "location": "US",
+      "asn_org": "AMAZON-02, US",
+      "detected_technologies": [
+        {
+          "technology": "Font Awesome",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]*?(?:F|f)o(?:n|r)t-?(?:A|a)wesome(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)",
+            "(?:F|f)o(?:n|r)t-?(?:A|a)wesome(?:.*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)"
+          ]
+        },
+        {
+          "technology": "Google Analytics",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "google-analytics\\.com/(?:ga|urchin|analytics)\\.js",
+            ""
+          ]
+        },
+        {
+          "technology": "Google Tag Manager",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<!-- (?:End )?Google Tag Manager -->",
+            "googletagmanager\\.com/gtm\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "daana-paylaterr.vnews.xyz/",
+    "scan_url": "https://urlscan.io/result/5db9681f-105c-469a-bbac-39867b3678d8/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T07:32:50.278503",
+      "scan_url": "https://urlscan.io/result/5db9681f-105c-469a-bbac-39867b3678d8/",
+      "targeted_brands": [
+        {
+          "name": "DANA",
+          "category": "Financial"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Bootstrap",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]*?bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.css",
+            "bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "Ionicons",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+ionicons(?:\\.min)?\\.css"
+          ]
+        },
+        {
+          "technology": "Slick",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link [^>]+(?:/([\\d.]+)/)?slick-theme\\.css",
+            "(?:/([\\d.]+))?/slick(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/([\\d.]+)/jquery(?:\\.min)?\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        },
+        {
+          "technology": "jsDelivr",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link [^>]*?href=\"?[a-zA-Z]*?:?//cdn\\.jsdelivr\\.net/",
+            "//cdn\\.jsdelivr\\.net/"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "danaald-indonesiia.xyour.web.id/",
+    "scan_url": "https://urlscan.io/result/f66d9fca-42d1-4475-b51d-ae7cb20c0c2b/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T07:35:56.299773",
+      "scan_url": "https://urlscan.io/result/f66d9fca-42d1-4475-b51d-ae7cb20c0c2b/",
+      "targeted_brands": [
+        {
+          "name": "DANA",
+          "category": "Financial"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "/([\\d.]+)/jquery(?:\\.min)?\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "shrt.co.il/",
+    "scan_url": "https://urlscan.io/result/a527185a-4a8b-4bbf-814e-1d919f7ef38a/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T07:46:26.711407",
+      "scan_url": "https://urlscan.io/result/a527185a-4a8b-4bbf-814e-1d919f7ef38a/",
+      "targeted_brands": [],
+      "location": "US",
+      "asn_org": "AMAZON-02, US",
+      "detected_technologies": []
+    }
+  }
+]

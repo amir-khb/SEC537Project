@@ -1,0 +1,34 @@
+URLScan Statistics Report - Generated at 2025-01-15T08:00:43.428822
+================================================================================
+
+Overall Statistics:
+----------------------------------------
+Total URLs analyzed: 2,150
+Total malicious verdicts: 90
+Malicious percentage: 4.19%
+Unknown targets: 32 (35.56% of malicious)
+
+Top Targeted Companies/Organizations:
+----------------------------------------
+2. Telegram: 17 times
+3. Generic Crypto: 5 times
+4. Generic Cloudflare: 5 times
+5. Sahibinden: 4 times
+6. Steam: 4 times
+7. Facebook: 3 times
+8. Fake Shop: 2 times
+9. Generic Scam: 2 times
+10. Coinbase: 2 times
+
+Top Hosting Providers:
+----------------------------------------
+1. CLOUDFLARENET, US: 43 times
+2. AMAZON-02, US: 9 times
+3. TENCENT-NET-AP-CN Tencent Building, Kejizhongyi Avenue, CN: 7 times
+4. FASTLY, US: 4 times
+5. WEEBLY, US: 2 times
+6. ASLINE-AS-AP ASLINE LIMITED, HK: 2 times
+7. ALIBABA-CN-NET Alibaba US Technology Co: 2 times
+8. BULSATCOM-BG-AS Vivacom Bulgaria EAD, BG: 1 times
+9. CTGSERVERLIMITED-AS-AP CTG Server Limited, HK: 1 times
+10. HETZNER-AS Hetzner Online GmbH, DE: 1 times
