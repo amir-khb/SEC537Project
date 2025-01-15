@@ -2993,5 +2993,568 @@
       "asn_org": "AMAZON-02, US",
       "detected_technologies": []
     }
+  },
+  {
+    "url": "www.mcsharepoint.com/eur/f7e06a08-57c2-479e-bfa5-e63a6dd83518/5f2cc347-a187-4e2...",
+    "scan_url": "https://urlscan.io/result/d132e045-9500-4621-a943-a46fdf9c184f/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T13:44:58.627879",
+      "scan_url": "https://urlscan.io/result/d132e045-9500-4621-a943-a46fdf9c184f/",
+      "targeted_brands": [
+        {
+          "name": "Microsoft",
+          "category": "Consumer"
+        }
+      ],
+      "location": "US",
+      "asn_org": "MICROSOFT-CORP-MSN-AS-BLOCK, US",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "kampanyalardasonanlar.online/sadece-online-ozel/",
+    "scan_url": "https://urlscan.io/result/b995b9cb-d849-41af-a7a2-b7c3d8c3c021/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T14:24:38.646805",
+      "scan_url": "https://urlscan.io/result/b995b9cb-d849-41af-a7a2-b7c3d8c3c021/",
+      "targeted_brands": [
+        {
+          "name": "A101",
+          "category": "Retail"
+        }
+      ],
+      "location": null,
+      "asn_org": "NETRESEARCH Silent Connection Ltd",
+      "detected_technologies": [
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/([\\d.]+)/jquery(?:\\.min)?\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "buindirimsanagore.xyz/",
+    "scan_url": "https://urlscan.io/result/584c4764-050d-4ac8-843c-6d614670aed0/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T14:25:35.796768",
+      "scan_url": "https://urlscan.io/result/584c4764-050d-4ac8-843c-6d614670aed0/",
+      "targeted_brands": [
+        {
+          "name": "A101",
+          "category": "Retail"
+        }
+      ],
+      "location": "US",
+      "asn_org": "DIGITALOCEAN-ASN, US",
+      "detected_technologies": [
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/([\\d.]+)/jquery(?:\\.min)?\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "buindirimsanagore.club/",
+    "scan_url": "https://urlscan.io/result/4545cc91-7f27-4069-bde5-1ea4f8e9a028/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T14:26:16.096462",
+      "scan_url": "https://urlscan.io/result/4545cc91-7f27-4069-bde5-1ea4f8e9a028/",
+      "targeted_brands": [
+        {
+          "name": "A101",
+          "category": "Retail"
+        }
+      ],
+      "location": "US",
+      "asn_org": "DIGITALOCEAN-ASN, US",
+      "detected_technologies": [
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/([\\d.]+)/jquery(?:\\.min)?\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "buindirimsanagore.net/",
+    "scan_url": "https://urlscan.io/result/babd9c99-cc84-4e05-8f5d-54567d2f2b32/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T14:26:37.989226",
+      "scan_url": "https://urlscan.io/result/babd9c99-cc84-4e05-8f5d-54567d2f2b32/",
+      "targeted_brands": [
+        {
+          "name": "A101",
+          "category": "Retail"
+        }
+      ],
+      "location": "US",
+      "asn_org": "DIGITALOCEAN-ASN, US",
+      "detected_technologies": [
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/([\\d.]+)/jquery(?:\\.min)?\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "firsatlarbitmezurunlertukenmez.online/sadece-online-ozel/",
+    "scan_url": "https://urlscan.io/result/07cbb73a-f090-43ea-ae72-bddeda148eaf/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T14:26:56.409565",
+      "scan_url": "https://urlscan.io/result/07cbb73a-f090-43ea-ae72-bddeda148eaf/",
+      "targeted_brands": [
+        {
+          "name": "A101",
+          "category": "Retail"
+        }
+      ],
+      "location": null,
+      "asn_org": "NETRESEARCH Silent Connection Ltd",
+      "detected_technologies": [
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/([\\d.]+)/jquery(?:\\.min)?\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "burada-son-zamanlarda-mutlu-olmayan-bulamazsin.com/sadece-online-ozel/",
+    "scan_url": "https://urlscan.io/result/1da26695-534e-413c-b476-89e18f3bdaa9/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T14:27:20.789231",
+      "scan_url": "https://urlscan.io/result/1da26695-534e-413c-b476-89e18f3bdaa9/",
+      "targeted_brands": [
+        {
+          "name": "A101",
+          "category": "Retail"
+        }
+      ],
+      "location": "DE",
+      "asn_org": "MYLOC-AS WIIT AG, DE",
+      "detected_technologies": [
+        {
+          "technology": "React",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<[^>]+data-react"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "www.hunterbootsdeutschland.de/",
+    "scan_url": "https://urlscan.io/result/ab701f16-b187-482f-bdd2-4eebf3a90c98/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T14:35:12.059422",
+      "scan_url": "https://urlscan.io/result/ab701f16-b187-482f-bdd2-4eebf3a90c98/",
+      "targeted_brands": [
+        {
+          "name": "Fake Shop",
+          "category": "Fashion"
+        }
+      ],
+      "location": "GB",
+      "asn_org": "GLOBALCOLOCATION GLOBAL COLOCATION LIMITED, GB",
+      "detected_technologies": [
+        {
+          "technology": "Google Font API",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+fonts\\.(?:googleapis|google)\\.com"
+          ]
+        },
+        {
+          "technology": "Lightbox",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link [^>]*href=\"[^\"]+lightbox(?:\\.min)?\\.css",
+            "lightbox(?:-plus-jquery)?.{0,32}\\.js"
+          ]
+        },
+        {
+          "technology": "Modernizr",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "([\\d.]+)?/modernizr(?:\\.([\\d.]+))?.*\\.js"
+          ]
+        },
+        {
+          "technology": "Slick",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "(?:/([\\d.]+))?/slick(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "www.mcsharepoint.com/eur/f7e06a08-57c2-479e-bfa5-e63a6dd83518/07e8f641-d3d4-470...",
+    "scan_url": "https://urlscan.io/result/2079f616-797b-4743-a296-681f5d2a939d/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T15:09:42.704872",
+      "scan_url": "https://urlscan.io/result/2079f616-797b-4743-a296-681f5d2a939d/",
+      "targeted_brands": [
+        {
+          "name": "Microsoft",
+          "category": "Consumer"
+        }
+      ],
+      "location": "US",
+      "asn_org": "MICROSOFT-CORP-MSN-AS-BLOCK, US",
+      "detected_technologies": []
+    }
+  },
+  {
+    "url": "footjoy-norge.com/collections/kl%C3%83%C2%A6r-c-1.html?coll=Pattern&color=Bl%C3...",
+    "scan_url": "https://urlscan.io/result/215aa85f-d9ba-4cbe-ae79-63dd5dcb9daa/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T15:30:43.294981",
+      "scan_url": "https://urlscan.io/result/215aa85f-d9ba-4cbe-ae79-63dd5dcb9daa/",
+      "targeted_brands": [
+        {
+          "name": "Fake Shop",
+          "category": "Fashion"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Google Font API",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+fonts\\.(?:googleapis|google)\\.com"
+          ]
+        },
+        {
+          "technology": "Lightbox",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "lightbox(?:-plus-jquery)?.{0,32}\\.js"
+          ]
+        },
+        {
+          "technology": "Modernizr",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "([\\d.]+)?/modernizr(?:\\.([\\d.]+))?.*\\.js"
+          ]
+        },
+        {
+          "technology": "Slick",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "(?:/([\\d.]+))?/slick(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "www.lasmobile.com/",
+    "scan_url": "https://urlscan.io/result/433d5e9f-6de5-45f6-ac19-2cd0d22f9f46/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T16:24:11.645195",
+      "scan_url": "https://urlscan.io/result/433d5e9f-6de5-45f6-ac19-2cd0d22f9f46/",
+      "targeted_brands": [],
+      "location": "US",
+      "asn_org": "AROSS-AS, US",
+      "detected_technologies": [
+        {
+          "technology": "Swiper Slider",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "swiper(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]([\\d.]*\\d)[^/]*\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "secured-login.net/pages/7533f1246350900dadfc5ea1c4435c88/XdXJbsPWh0dHtBzOi8vc2b...",
+    "scan_url": "https://urlscan.io/result/dbb8f3ac-e840-49b5-ac14-fb644469cf67/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T16:32:27.076746",
+      "scan_url": "https://urlscan.io/result/dbb8f3ac-e840-49b5-ac14-fb644469cf67/",
+      "targeted_brands": [
+        {
+          "name": "Phishing Simulation",
+          "category": "Internet"
+        }
+      ],
+      "location": "US",
+      "asn_org": "AMAZON-AES, US",
+      "detected_technologies": [
+        {
+          "technology": "Bootstrap",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]*?bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.css",
+            "bootstrap(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)[^>]*?(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "Google Font API",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+fonts\\.(?:googleapis|google)\\.com"
+          ]
+        },
+        {
+          "technology": "Modernizr",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "([\\d.]+)?/modernizr(?:\\.([\\d.]+))?.*\\.js"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "cahaya128slot.pro/",
+    "scan_url": "https://urlscan.io/result/8642bc8e-117d-4056-90be-d59b04cce7e5/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T16:45:54.676459",
+      "scan_url": "https://urlscan.io/result/8642bc8e-117d-4056-90be-d59b04cce7e5/",
+      "targeted_brands": [
+        {
+          "name": "Generic Cloudflare",
+          "category": "Online"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "Facebook",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "//connect\\.facebook\\.([a-z]+)/[^/]*/[a-z]*\\.js"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "www.mrspollock.shop/",
+    "scan_url": "https://urlscan.io/result/8c4f7736-2f23-4a31-82e8-d77424e02007/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T16:56:24.418752",
+      "scan_url": "https://urlscan.io/result/8c4f7736-2f23-4a31-82e8-d77424e02007/",
+      "targeted_brands": [
+        {
+          "name": "Fake Shop",
+          "category": "Fashion"
+        }
+      ],
+      "location": "US",
+      "asn_org": "CLOUDFLARENET, US",
+      "detected_technologies": [
+        {
+          "technology": "WooCommerce",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/woocommerce(?:\\.min)?\\.js(?:\\?ver=([0-9.]+))?"
+          ]
+        },
+        {
+          "technology": "WordPress",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link rel=[\"']stylesheet[\"'] [^>]+/wp-(?:content|includes)/",
+            "/wp-(?:content|includes)/"
+          ]
+        },
+        {
+          "technology": "Yoast SEO",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<!-- This site is optimized with the Yoast (?:WordPress )?SEO plugin v([\\d.]+) -"
+          ]
+        },
+        {
+          "technology": "Font Awesome",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+(?:([\\d.]+)/)?(?:css/)?font-awesome(?:\\.min)?\\.css",
+            "<link[^>]* href=[^>]*?(?:F|f)o(?:n|r)t-?(?:A|a)wesome(?:[^>]*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)",
+            "(?:F|f)o(?:n|r)t-?(?:A|a)wesome(?:.*?([0-9a-fA-F]{7,40}|[\\d]+(?:.[\\d]+(?:.[\\d]+)?)?)|)"
+          ]
+        },
+        {
+          "technology": "Google Font API",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<link[^>]* href=[^>]+fonts\\.(?:googleapis|google)\\.com"
+          ]
+        },
+        {
+          "technology": "Revslider",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/revslider/[/\\w-]+/js"
+          ]
+        },
+        {
+          "technology": "Select2",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "select2(?:\\.min|\\.full)?\\.js"
+          ]
+        },
+        {
+          "technology": "Slick",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "(?:/([\\d.]+))?/slick(?:\\.min)?\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        },
+        {
+          "technology": "jQuery Migrate",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "jquery[.-]migrate(?:-([\\d.]+))?(?:\\.min)?\\.js(?:\\?ver=([\\d.]+))?"
+          ]
+        },
+        {
+          "technology": "prettyPhoto",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "(?:<link [^>]*href=\"[^\"]*prettyPhoto(?:\\.min)?\\.css|<a [^>]*rel=\"prettyPhoto)"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "evri.qpon/",
+    "scan_url": "https://urlscan.io/result/bbbe9faa-e0d3-4e4c-be02-08bdc5dc32bd/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T17:04:02.363111",
+      "scan_url": "https://urlscan.io/result/bbbe9faa-e0d3-4e4c-be02-08bdc5dc32bd/",
+      "targeted_brands": [
+        {
+          "name": "Hermes",
+          "category": "Transportation"
+        }
+      ],
+      "location": "US",
+      "asn_org": "EKABI, US",
+      "detected_technologies": [
+        {
+          "technology": "Nuxt.js",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "<div [^>]*id=\"__nuxt\""
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "url": "last.steamlerx.com/",
+    "scan_url": "https://urlscan.io/result/27d32720-5f06-4155-b700-8df4fcfca18d/",
+    "verdict": "Malicious",
+    "metadata": {
+      "timestamp": "2025-01-15T17:20:45.888949",
+      "scan_url": "https://urlscan.io/result/27d32720-5f06-4155-b700-8df4fcfca18d/",
+      "targeted_brands": [
+        {
+          "name": "EU Government",
+          "category": "Government"
+        }
+      ],
+      "location": "US",
+      "asn_org": "AS-COLOCROSSING, US",
+      "detected_technologies": [
+        {
+          "technology": "Facebook",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "//connect\\.facebook\\.([a-z]+)/[^/]*/[a-z]*\\.js"
+          ]
+        },
+        {
+          "technology": "jQuery",
+          "confidence": "Overall confidence : 100%",
+          "patterns": [
+            "/([\\d.]+)/jquery(?:\\.min)?\\.js",
+            "jquery.*\\.js(?:\\?ver(?:sion)?=([\\d.]+))?"
+          ]
+        }
+      ]
+    }
   }
 ]
